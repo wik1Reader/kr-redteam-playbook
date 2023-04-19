@@ -47,3 +47,5 @@
 4/16 - [undefined-1.md](../critical-info-infrastructure/01-account-management/undefined-1.md "mention") 페이지 추가 [차가운낑깡](http://localhost:5000/u/1y9ExMjOF5OnXgSOyWROhJQascW2 "mention")
 
 4/18 -   [SMTP GoPhish (AWS + ZOHO)](../infrastructure/smtp-aws-zoho.md)   페이지 추가 - [@nanentp](ttps://github.com/nanentp)
+
+4/19 - [https-redirector.md](../infrastructure/https-redirector.md "mention")페이지 추가&#x20;
