@@ -14,7 +14,7 @@ Cuckoo SandBox는 말웨어를 자동으로 분석해주는 오픈 소스 샌드
 
 ## Cuckoo 샌드박스의 구조 <a href="#how-the-cuckoo-sandbox-structure-looks-like" id="how-the-cuckoo-sandbox-structure-looks-like"></a>
 
-Cuckoo 샌드박스의 기본적 구조에 대해 알아봅시다. 샌드박싱 환경을 설치하는 방법은 여러 가지가 있지만 본 데모에서는  가장 간단한 구조를 구축해 보겠습니다.
+Cuckoo 샌드박스의 기본적 구조에 대해 알아봅시다. 샌드박싱 환경을 설치하는 방법은 여러 가지가 있지만 본 데모에서는 가장 간단한 구조를 구축해 보겠습니다.
 
 아래 다이어그램은 기본 Cuckoo 샌드박스 환경이 어떻게 구성되는지 설명합니다.
 
@@ -39,7 +39,7 @@ Cuckoo 호스트는 Cuckoo 게스트와 관리하며 데이터 트래픽 관리�
 
 **Cuckoo 게스트:**
 
-각   분석 게스트 Analysis Guest는 악성코드가 실행되는 깨끗한 환경입니다. 맬웨어 동작은 Cuckoo 호스트에 다시 보고됩니다.
+각 분석 게스트 Analysis Guest는 악성코드가 실행되는 깨끗한 환경입니다. 맬웨어 동작은 Cuckoo 호스트에 다시 보고됩니다.
 
 **아래와 같은 스팩으로 게스트를 설치합니다:**
 
@@ -54,19 +54,19 @@ _주의! 데이터베이스 쿼리를 저장을 위한 개별 VM을 설치하여
 
 설치 단계는 다음의 과정을 거칩니다.
 
-\-> Cuckoo 호스트 우분투 VM 설치&#x20;
+\-> Cuckoo 호스트 우분투 VM 설치
 
-\-> Cuckoo 게스트 윈도우 VM 설치&#x20;
+\-> Cuckoo 게스트 윈도우 VM 설치
 
-\-> 윈도우 VM 구성&#x20;
+\-> 윈도우 VM 구성
 
-\-> 네트워크 구성 요소 구성&#x20;
+\-> 네트워크 구성 요소 구성
 
-\-> Cuckoo 에이전트 설치&#x20;
+\-> Cuckoo 에이전트 설치
 
-\-> 가상 머신 스냅샷저장&#x20;
+\-> 가상 머신 스냅샷저장
 
-\-> Cuckoo 모듈 및 사용자 정의 구성&#x20;
+\-> Cuckoo 모듈 및 사용자 정의 구성
 
 \-> 작동 테스트
 
@@ -107,7 +107,7 @@ VMware Workstation을 다운로드하고 Ubuntu VM을 설치합니다.
 
 #### MongoDB 설치
 
-Django 기반 웹 인터페이스를 사용하기 위해서는 MongoDB가 필요합니다.&#x20;
+Django 기반 웹 인터페이스를 사용하기 위해서는 MongoDB가 필요합니다.
 
 sudo apt-get install mongodb 설치 대신에 수동 설치 (소스 코드에서)방법을 권장합니다:
 
@@ -130,7 +130,7 @@ sudo service mongod start && sudo systemctl enable mongod.service
 
 #### TCPDUMP 설치
 
-맬웨어 샌드박스  실행 중 발생하는 네트워크 트래픽 덤프하려면 tcpdump 패키지가 필요합니다.
+맬웨어 샌드박스 실행 중 발생하는 네트워크 트래픽 덤프하려면 tcpdump 패키지가 필요합니다.
 
 ```
 sudo apt-get install tcpdump apparmor-utils
@@ -164,9 +164,9 @@ guacd는 Cuckoo 웹 인터페이스의 원격 제어 기능을 위해 RDP, VNC �
 sudo apt install libguac-client-rdp0 libguac-client-vnc0 libguac-client-ssh0 guacd
 ```
 
-#### 호스트 VM내  Virutual 박스 설치
+#### 호스트 VM내 Virutual 박스 설치
 
-이제 호스트VM 내에 게스트 VM을  설치하기위한 가상화 솔루션이 필요합니다. Cuckoo 샌드박스는 대부분의 가상화 소프트웨어 솔루션을 지원합니다. 본  데모에서는 VirtualBox를 사용하며 다음과 같이 원활한수 업데이트를 위해 수동설치을 사용하는 것이 좋습니다.
+이제 호스트VM 내에 게스트 VM을 설치하기위한 가상화 솔루션이 필요합니다. Cuckoo 샌드박스는 대부분의 가상화 소프트웨어 솔루션을 지원합니다. 본 데모에서는 VirtualBox를 사용하며 다음과 같이 원활한수 업데이트를 위해 수동설치을 사용하는 것이 좋습니다.
 
 ```
 echo deb http://download.virtualbox.org/virtualbox/debian xenial contrib | sudo tee -a /etc/apt/sources.list.d/virtualbox.list
@@ -179,7 +179,7 @@ https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
 
 #### Cuckoo 호스트에 Cuckoo 서버 설치
 
-최신 버전의 Cuckoo를 설치하는 것은 다음과 같이 간단합니다. -U 옵션을 사용하여 "cuckoo"   (현재 사용자)로 cuckoo를 설치합니다.
+최신 버전의 Cuckoo를 설치하는 것은 다음과 같이 간단합니다. -U 옵션을 사용하여 "cuckoo" (현재 사용자)로 cuckoo를 설치합니다.
 
 ```
 sudo pip2 install -U cuckoo
@@ -205,7 +205,7 @@ Windows 운영 체제는 무료로 사용할 수 없기 때문입니다. 그러�
 
 #### VirtualBox를 실행하고 Cuckoo Ubuntu 호스트에서 게스트 VM 생성
 
-먼저,  VirtualBox를 실행합니다
+먼저, VirtualBox를 실행합니다
 
 ```
 sudo virtualbox
@@ -217,25 +217,23 @@ sudo virtualbox
 
 Settings-> Display -> Enable 3D Acceleration을 활성화 시켜주세요.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Settings -> Storage -> CD 아이콘을 클릭하여 윈도우 .iso를 가져옵니다. 또한 호스트(Ubuntu)와 게스트(Windows) 간에 공유 폴더를 활성화하려면 최신 VBox 게스트 추가가 필요합니다.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
-Help -> About에서 VirtualBox 버전을 확인합시다. 본  데모는  6.1.32\_Ubuntu r1 49290을 실행 중입니다.
+Help -> About에서 VirtualBox 버전을 확인합시다. 본 데모는 6.1.32\_Ubuntu r1 49290을 실행 중입니다.
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-
-
 VirtualBox 다운로드창에 가서 버전에 맞는확장 프로그램을 다운로드하고 가져옵니다.
 
-&#x20;[https://download.virtualbox.org/virtualbox/6.1.0/](https://download.virtualbox.org/virtualbox/6.1.0/)&#x20;
+[https://download.virtualbox.org/virtualbox/6.1.0/](https://download.virtualbox.org/virtualbox/6.1.0/)
 
 <figure><img src="https://lh6.googleusercontent.com/ln44LwwO3lOZBU1sVgqXCdnf--RF-SYOikuS6hc0qtc1HOPiLQ8IbYuoUJ2QLGWAZ6fLAh7b5ceAb_4RzT0ZfRTCeavHNsyDTrQyF_3X_DW8gS9wpzm7pXYD3cZ7a7zgf7yoThzFzjwPulbyakZYrVs" alt=""><figcaption></figcaption></figure>
 
-### 게스트윈도우 VM 구성  설정
+### 게스트윈도우 VM 구성 설정
 
 이제 VM을 실행하고 제품 키를 사용하여 Windows 7을 설치 및 활성화합니다.
 
@@ -243,7 +241,7 @@ VirtualBox 다운로드창에 가서 버전에 맞는확장 프로그램을 다�
 
 Windows 7 게스트VM이 부팅되면 다음과 같이 몇 가지 기본 Windows 보안 기능을 비활성화해야 합니다.
 
-이제 게스트VM을 설정할 차례입니다. 아래와 같이 윈도우방화벽과  자동 업데이트를 비활성화 해야합니다.
+이제 게스트VM을 설정할 차례입니다. 아래와 같이 윈도우방화벽과 자동 업데이트를 비활성화 해야합니다.
 
 **Windows 방화벽 비활성화**
 
@@ -269,7 +267,7 @@ Windows 7 게스트VM이 부팅되면 다음과 같이 몇 가지 기본 Windows
 
 또는 다음과 같이 관리자 계정을 활성화할 수 있습니다.
 
-`net  user administrator /active:yes`
+`net user administrator /active:yes`
 
 <figure><img src="https://lh4.googleusercontent.com/RR1uaO3AiuxKPV7obZ04OYBcGdgzHeyJ2CL_0nB8CEZZ-8G3aDbh34uCwRJuwTVKJBfF6iDGFS7Y8kyYxlpYsLjTHgAU6XUnPy03yund2V8Q-RQEw4RNN2qqpUp8933kHGdOTbnlDloiOFq9vj663w4" alt=""><figcaption></figcaption></figure>
 
@@ -289,7 +287,7 @@ Yes를클릭하면 설치할 VBoxWindowsAddions를 찾을 수 있습니다.
 
 <figure><img src="https://lh4.googleusercontent.com/HSES-d7H3P5JyXjb1CTA2L6JDfRBAv3pz2RqRJeGMaqE1HfaiyghFHxqWuhF9f_Dxs-gmL-VLO_OE-Zx0LyE3LV37kJ1R9CXK-lFPY7lMhnhoJMKVUe_kzpCrA34kIlj_721EX98ZLdbyfAFE-FZRls" alt=""><figcaption></figcaption></figure>
 
-Devices -> Shared Folders -> Add Share -> Set the Folder Path and name -> Opt-in Auto-mount   Make Permanent 설정을 해줍니다.
+Devices -> Shared Folders -> Add Share -> Set the Folder Path and name -> Opt-in Auto-mount Make Permanent 설정을 해줍니다.
 
 ![](https://lh5.googleusercontent.com/rOoK9kM-dezNPBONnKOxeyH27ZmO6-1rtjyUa4jSWp9W-Z0Kz2rdV5TNEV6L9iNw6fEvzt24qUSKKSwjJf8OD7c9kIucBbVqLhPBOjM1I4wMHOA5yfe-JcPtVd9khwYMfBV2YGWBBMpTcVxnhUfDmFI)
 
@@ -329,13 +327,13 @@ Pillow 라이브러리는 분석 중에 Windows 데스크톱의 스크린샷을 
 
 이제 Cuckoo Host와 Cuckoo Guest를 모두 설정했습니다. 인터넷 및 로컬 네트워크에 액세스하도록 가상 네트워크 구성을 진행할 수 있습니다.
 
-Bridged Adapter를 사용하여 동일한 서브넷에서 호스트 및 게스트 IP를 모두 할당합니다.&#x20;
+Bridged Adapter를 사용하여 동일한 서브넷에서 호스트 및 게스트 IP를 모두 할당합니다.
 
 Settings -> Network -> Enable Networkt Adapter로 이동하여 Bridged Adapter에 연결합니다. 네트워크 인터페이스 "ens33"을 선택합니다.
 
 <figure><img src="https://lh4.googleusercontent.com/pDC6yOmgNH5f4o6iLIDY2fr7W43qsARv4JnE9eEvWoiGKiGd0-hZfAOFSrhzLiAptpGyhiXipuWyMShFXAAwdMo2IZdmVbMWJVumhHjyYhvsSh9SkM4iOgVdZm9o_FOl0zeLiPOdeYgwfZkYSMv1Y_c" alt=""><figcaption></figcaption></figure>
 
-Cuckoo Host IP를 확인하고 192.168.121.133를 복사해  두세요. Host와동일한 서브넷에 게스트 IP를 설정해야 합니다.
+Cuckoo Host IP를 확인하고 192.168.121.133를 복사해 두세요. Host와동일한 서브넷에 게스트 IP를 설정해야 합니다.
 
 <figure><img src="https://lh4.googleusercontent.com/8JCxbM0w4Irerprwp3OLUaYUwGJYw0Q7i4lDXriyxoKSQsijJlNTL924WZKtna-y7pG4KyBkYTx_iKk0EwiT2maWR37-wBlHmofyoK9fMb_LIAYjcn_sVQGfKzgSp3Nkd2JjWrJ_75_tA1Cy5J6rFXs" alt=""><figcaption></figcaption></figure>
 
@@ -359,7 +357,7 @@ Cuckoo는 Guest 내부에서 실행되고 Host와의 통신 및 데이터 교환
 
 <figure><img src="https://lh3.googleusercontent.com/VsIJNIFQre3XV2kGBiMRuADcWIUGyY7tv_44ozb4GBpFbSTd5JkxzpDHJ2wsIcf9PACt31IXETA28RLm3NcqEC_yk3gHZa9vTln9WHmE1CHQrEdzKK1zV5GKjG_GZlWLY9Q1-OBiSE-KAvMyjTCqXQI" alt=""><figcaption></figcaption></figure>
 
-### 가상 머신  스냅샷 저장
+### 가상 머신 스냅샷 저장
 
 이제 가상 머신을 스냅샷 상태로 저장할 준비가 되었습니다.
 
@@ -386,7 +384,7 @@ VBoxManage snapshot "cuckoo1" restorecurrent
 
 먼저 cuckoo.conf 모듈을 수정하고 resultserver ip를 Cuckoo Host IP로 설정해야 합니다. 이 경우 호스트 IP는 192.168.121.133입니다.
 
-cuckoo.conf 파일은  \~/.cuckoo/conf/cuckoo.conf에서 찾을수 있습니다.
+cuckoo.conf 파일은 \~/.cuckoo/conf/cuckoo.conf에서 찾을수 있습니다.
 
 ```
 vim ~/.cuckoo/conf/cuckoo.conf
@@ -410,9 +408,9 @@ vim ~/.cuckoo/conf/virtualbox.conf
 
 #### Processing modules**을 사용한 사용자 지정**
 
-Cuckoo의 Processing modules  은 샌드박스에서 생성된 RAW 결과를 분석하는 사용자 정의 방법을 정의할 수 있는 Python 스크립트입니다.
+Cuckoo의 Processing modules 은 샌드박스에서 생성된 RAW 결과를 분석하는 사용자 정의 방법을 정의할 수 있는 Python 스크립트입니다.
 
-Cuckoo에서 제공하는 몇 가지 기본 처리 모듈이 있습니다. 본 데모는 바이러스토탈 무료 커뮤니티 API (`cuckoo/processing/virustotal.py`)를  사용합니다. 이러한 API Integration을 통해VirusTotal.com에서 분석된 파일의 바이러스 Signature를 검색합니다. Virustotal과 통합하려면 다음과 같이 processing.conf를 편집해야 합니다.
+Cuckoo에서 제공하는 몇 가지 기본 처리 모듈이 있습니다. 본 데모는 바이러스토탈 무료 커뮤니티 API (`cuckoo/processing/virustotal.py`)를 사용합니다. 이러한 API Integration을 통해VirusTotal.com에서 분석된 파일의 바이러스 Signature를 검색합니다. Virustotal과 통합하려면 다음과 같이 processing.conf를 편집해야 합니다.
 
 ```
 vim ~/.cuckoo/conf/processing.conf
@@ -426,7 +424,7 @@ vim ~/.cuckoo/conf/processing.conf
 
 이제 Cuckoo는 맬웨어에 대해 VirusTotal 엔진을 실행할 준비가 됐습니다
 
-### &#x20;작동 테스트
+### 작동 테스트
 
 이제 테스트 실행을 할 시간입니다!
 
@@ -448,7 +446,7 @@ http://127.0.0.1:8000(기본 포트 8000)으로 이동하면 다음과 같은 �
 
 <figure><img src="https://lh6.googleusercontent.com/mcChx-gQujjuTFoyl3C-KKm123rjPgiP3JhihIG4TN0qhv3VrhlldIs2-8JAd9ePSoV7N2h3F3B3VhWlALpdmbcQxjWHFqCep-GyPL8m9iL7KqIT7QOi5_0k6eCJFVy2Ozll2cRVeci__qMaMlD0zVw" alt=""><figcaption></figcaption></figure>
 
-말웨어  mimikatz.exe로 테스팅 해보면 Cuckoo가 성공적으로 실행되고 게스트 VM에서 파일을 분석하고 다시 Cuckoo 호스트  서버로 보고하는 것을 확인할수 있습니다.
+말웨어 mimikatz.exe로 테스팅 해보면 Cuckoo가 성공적으로 실행되고 게스트 VM에서 파일을 분석하고 다시 Cuckoo 호스트 서버로 보고하는 것을 확인할수 있습니다.
 
 <figure><img src="https://lh3.googleusercontent.com/zY-j5b5ToYb_eH3pHBxJqhl0OQwrRCdXN-Pov9uSKMWKwp-TFlSb1y6dsgOQK7w_5q10siyuXzHR8piafNSibBzWQYfAeyXBjl1GaOnVLs1Jr5y-SZPuDJQbRAzr6ANIBzg7zQd8ggEENDft1i3PkBU" alt=""><figcaption></figcaption></figure>
 
@@ -460,8 +458,8 @@ http://127.0.0.1:8000(기본 포트 8000)으로 이동하면 다음과 같은 �
 
 <figure><img src="https://lh5.googleusercontent.com/63GqGLpm_nSLhCd9zhpOznjt8XCb2tSCYKIeecYhgzQly9R3fh3iSWnM2_akdA72gb3WKBUpQJeNvMC1oOeP2jF4SjA-n-nqNgX-D1wztXR0NDBiBHpAL3D52Xo5--hTY__qHYkNSRB5TsJ9S-8d0VQ" alt=""><figcaption></figcaption></figure>
 
-### 마치며&#x20;
+### 마치며
 
-이제 Cuckoo 악성코드 자동 분석 솔루션이 있으니 말웨어  샘플을 가져 테스팅 해보고웨어가 어떻게  작동하는지 공부하면 된다. Happy Hacking!
+이제 Cuckoo 악성코드 자동 분석 솔루션이 있으니 말웨어 샘플을 가져 테스팅 해보고웨어가 어떻게 작동하는지 공부하면 된다. Happy Hacking!
 
-\
+\\
