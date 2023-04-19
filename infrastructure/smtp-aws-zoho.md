@@ -75,7 +75,8 @@ Namecheap에 들어가 grootbaon.com을 확인하여 구매한다.
 ### GoPhish 호스팅  AWS EC2 서버 구축
 
 적절한 도메인을 구입했다면 이제 AWS와 같은 클라우드 VM 호스팅 서비스를 이용해서 GoPhish (피싱 메일 전송 서비스)를 구축한다. AWS는 처음 12개월 프리 티어를 제공하므로 본 실습에서는 AWS를 사용한다.
-![[Pasted image 20230420112224.png]]
+
+![](../Pasted%20image%2020230420112753.png)
 
 일단 아래 링크에서 무료 계정을 생성해 12개월 무료 티어 계정을 만든다.&#x20;
 
@@ -246,6 +247,9 @@ ping login.grootbaon.com을 실행해 login.grootbaon.com이 AWS EC2 퍼블릭 �
 
 #### Landing Pages 설정
 
+
+
+![](../obsidian_resources/Pasted%20image%2020230420113422.png)
 Landing Pages에서는 피싱 피해자가 피싱 메일이 유도하는 피싱 페이지를 방문할때 보이는 페이지를 뜻한다. 본 실습에서는 "Instagram 계정 탈취"를 가정해 아래와 같이 설정해주었다.
 
 본 실습이 교육의 목적인 만큼 여기에 쓰인 인스타그램 로그인 페이지 소스는 따로 공유할수 없지만 피싱 템플릿은 어느정도 본 페이지의 HTML과 CSS 소스를 레퍼런스 떠와 만들수 있겠다.
