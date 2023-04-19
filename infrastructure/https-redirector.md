@@ -222,4 +222,5 @@ HTTPS 리다이렉터는 공격자들의 인프라에 가장 기본적인 요소
 ### 레퍼런스&#x20;
 
 * [https://coffeegist.com/security/resilient-red-team-https-redirection-using-nginx/](https://coffeegist.com/security/resilient-red-team-https-redirection-using-nginx/)
+* [https://havocframework.com/docs/profiles](https://havocframework.com/docs/profiles)
 
