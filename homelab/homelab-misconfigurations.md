@@ -1,16 +1,14 @@
 # 취약한 랩을 위한 설정 커맨드
 
-### 개념&#x20;
+### 개념
 
-홈 랩을 만들어 내부망 관련된 모의해킹을 하려면 실무에서 마주칠 수 있는 잘못된 설정을 홈랩에 "심어야"한다. 대부분의 모의해커들은 공격할 줄은 알지만, 공격이 가능한 잘못된 설정이 어디서 왜 발생한 것인지는 모르는 경우가 많다. 다음은 AD 공격과 관련된 잘못된 설정을 하는 명령어들이다.&#x20;
+홈 랩을 만들어 내부망 관련된 모의해킹을 하려면 실무에서 마주칠 수 있는 잘못된 설정을 홈랩에 "심어야"한다. 대부분의 모의해커들은 공격할 줄은 알지만, 공격이 가능한 잘못된 설정이 어디서 왜 발생한 것인지는 모르는 경우가 많다. 다음은 AD 공격과 관련된 잘못된 설정을 하는 명령어들이다.
 
-### 주의&#x20;
+### 주의
 
-다음의 설정들은 자신의 홈랩이 아니라면 절대로 적용해서는 안된다. 이에 따라 발생할 수 있는 피해와 관련해 레드팀 프로젝트는 책임을 지지 않는다.&#x20;
+다음의 설정들은 자신의 홈랩이 아니라면 절대로 적용해서는 안된다. 이에 따라 발생할 수 있는 피해와 관련해 레드팀 프로젝트는 책임을 지지 않는다.
 
-### 잘못된 설정&#x20;
-
-
+### 잘못된 설정
 
 LDAP Signing on/off
 
@@ -20,14 +18,14 @@ Computer Configuration > Policies > Windows Settings > Security Settings > Local
 Domain Controller: LDAP Server Signing Requirements 
 ```
 
-LDAP Channel Binding&#x20;
+LDAP Channel Binding
 
 ```
 # Registry 
 Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Services\NTDS\Parameters" -Name "LdapEnforceChannelBinding" -Value 3
 ```
 
-LDAP Anonymous Bind Enabled&#x20;
+LDAP Anonymous Bind Enabled
 
 ```
 # ADSI and dSHeurstics setting 
@@ -40,8 +38,6 @@ ADUC > Advanced > Users Container > Properties > Permissions > Add > Anonymous L
 # Validate the Poggers 
 crackmapexec ldap <Dc> -u '' -p '' --users
 ```
-
-
 
 SMB signing off
 
@@ -271,7 +267,7 @@ Fingers crossed it works now
 # Having WebDAV on CA server with Web Enrollment may not work - need more testing. 
 ```
 
-MachineAccountQuota - for shared lab environment&#x20;
+MachineAccountQuota - for shared lab environment
 
 ```
 Get-ADObject -Identity ((Get-ADDomain).distinguishedname) -Properties ms-DS-MachineAccountQuota
@@ -332,5 +328,24 @@ Remove History
 ```
 echo "hi" >> (Get-PSReadlineOption).HistorySavePath
 clear-history 
+```
+
+SCCM Server Installation&#x20;
+
+```
+References: 
+- https://www.prajwaldesai.com/sccm-1902-install-guide-using-baseline-media/#Step-by-Step-SCCM-1902-Install-Guide
+- https://www.prajwal.org/sccm-network-access-account/
+
+The references are pretty straight forward. 
+1. Domain container, user, group configuration 
+2. Install SQL server on the server that SCCM will be also installed 
+3. If SCCM complains about not finding the correct MSSQL instance, 
+do NOT do "install primary standalone" option. Just go full manual and specify the SQL server 
+FQDN and the instance name. 
+4. Ensure SQL service is running through SQL Server Configuration manager. 
+5. Ensure SQL service has dynamic port <none> and tcp port 1433 via SQL server configuration manager
+6. gl! 
+
 ```
 
