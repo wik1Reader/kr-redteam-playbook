@@ -40,7 +40,7 @@ By nanentp
 
 또한 레드팀 SMTP GoPhish 구축법에서도 배웠듯 우리는 서버는 그래픽을 제공하지 않을시 로컬 포워딩을 해주면 본인 PC에서 리모트 서버에서 실행되는 GoPhish를 로컬에서 접근할수있다.
 
-![](obsidian_resources/Pasted%20image%2020230423103555.png)
+![](../obsidian_resources/Pasted%20image%2020230423103555.png)
 
 
 
@@ -53,7 +53,7 @@ By nanentp
 대신 아래와 같이 필자의 IP는 10.0.0.1, 회사 내부 중요 서버 IP는 10.0.0.5이다. 중요한 서버다 보니 포트는 22와 443만 열여놨다. 따라서 10.0.0.5 서버 3333 포트는 리모트로 접근 불가다.
 
 
-![](obsidian_resources/Pasted%20image%2020230423113146.png)
+![](../obsidian_resources/Pasted%20image%2020230423113146.png)
 
 
 
@@ -63,9 +63,9 @@ By nanentp
 
 따라서, 다음 커맨드를 통해 로컬 포워딩을 해주면 아래와 같은 연결이 완성된다.
 
-`ssh -L 2222:10.0.0.5:3333 <타겟 username>@10.0.0.5
+ssh -L 2222:10.0.0.5:3333 <타겟 username>@10.0.0.5
 
-![](obsidian_resources/Pasted%20image%2020230423121253.png)
+![](../obsidian_resources/Pasted%20image%2020230423121253.png)
 
 
 SSH 로컬 포워딩 커맨드 포멧은 다음과 같다:
@@ -97,30 +97,30 @@ ssh -L <LOCAL_HOST>:<LOCAL_PORT>:<REMOTE_HOST>:<REMOTE_PORT> <[USER@]SERVER_IP>
 
 Choi는 내부 192.168.137.136 포트 80에서 웹 서버가 실행되어 있는것을 확인했다. Choi는 외부에서 Groot 팀원이 내부 서버를 접근할 수 있게 리모트 VPS 게이트웨이에 리모트 포트 포워딩을 해주어 외부에서도 로컬 서비스를 접근할 수 있게 해준다. 
 
-![](obsidian_resources/Pasted%20image%2020230423152135.png)
+![](../obsidian_resources/Pasted%20image%2020230423152135.png)
 
 데모를 위해 Digital Ocean 또는 AWS로 간단하 Gateway 호스트를 준비한다. 본 데모에서는 기본 Ubuntu 서버를 만들었다.  따로 설치할 라이브러리는 없고 퍼블릭 IP만 기억해준다.
 
-![](obsidian_resources/Pasted%20image%2020230422195639%201.png)
+![](../obsidian_resources/Pasted%20image%2020230422195639%201.png)
 
 공격자는 로컬 서버 192.168.137.136에서 다음과 같은 Admin Panel이 실행되는것을 확인한다.
 
-![](obsidian_resources/Pasted%20image%2020230423150920.png)
+![](../obsidian_resources/Pasted%20image%2020230423150920.png)
 
 
 공격자는 같은 네트워크에 있는 192.168.137.136 웹 서버 포트를 리모트 VPS 포트 8889에 포워딩을 해줘 내부 서버를 외부에 노출시킨다. SSH 커맨드는 다음과 같다:
-![](obsidian_resources/Pasted%20image%2020230423151213.png)
+![](../obsidian_resources/Pasted%20image%2020230423151213.png)
 
-`ssh -N -R 8889:192.168.137.136:80 root@209.38.242.65
+ssh -N -R 8889:192.168.137.136:80 root@209.38.242.65
 
 외부에 내부 서버가 리모트 VPS 공용 IP와 포트넘버 8889로 노출된것을 확인할 수 있다.
 
-![](obsidian_resources/Pasted%20image%2020230423151148.png)
+![](../obsidian_resources/Pasted%20image%2020230423151148.png)
 
 
 앞서 언급한 난해한 예를 생각하자만 다음과 같을 수 있다. 공격자는 타겟 중요 서버에 일부러 리버스 쉘 리스너를 로컬 포트 87에 열어 놓는다. 그리고 리모트 포워딩을 통해 리모트 VPS의 포트 1111에 연결하는 외부 트래픽을 SSH 터널을 통해 87로 포워딩이 되어 결국 Groot는 192.168.137.136의 리버스 쉘을 얻게 된다. 
 
-![](obsidian_resources/Pasted%20image%2020230423154942.png)
+![](../obsidian_resources/Pasted%20image%2020230423154942.png)
 
 
 SSH 리모트 포워딩 커맨드 포멧은 다음과 같다:
