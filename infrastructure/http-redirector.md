@@ -1,4 +1,4 @@
-# HTTP 리다이렉터 설정
+``# HTTP 리다이렉터 설정
 
 이 페이지에서는 [example-infra.md](example-infra.md "mention")  의 개념을 참고해 레드팀 작전시 필요한 팀서버 및 HTTP 리다이렉터 (Redirector)를 AWS를 이용해 레드팀 공간과 그레이 공간에 설치해본다.
 
