@@ -8,8 +8,7 @@ description: >-
 
 ## 개요
 
-test
-저번 시간에서 Postfix와 같은 오픈 소스 메일 서비스를 사용해 Digtal Ocean 메일 서버를 직접 설정하는 법을 배웠다.&#x20;
+test 저번 시간에서 Postfix와 같은 오픈 소스 메일 서비스를 사용해 Digtal Ocean 메일 서버를 직접 설정하는 법을 배웠다.
 
 {% embed url="https://www.xn--hy1b43d247a.com/infrastructure/smtp" %}
 
@@ -17,7 +16,7 @@ test
 
 일단 저번시간과 다른점은 Digital Ocean 대신 AWS, Postfix 대신 서드파티 이메일 서비스를 이용한다.
 
-Digital Ocean vs AWS & Postfix vs 서드파티이(  e.g ZOHO )의  차이점은 다음과 같다:
+Digital Ocean vs AWS & Postfix vs 서드파티이( e.g ZOHO )의 차이점은 다음과 같다:
 
 ### Digital Ocean vs AWS
 
@@ -40,7 +39,7 @@ Postfix 메일 서버와 ZOHO와 같은 서드파티 메일 서버의 차이점�
 
 ## 준비물
 
-이번 실습은  다음과 같은 준비물이 필요하다:
+이번 실습은 다음과 같은 준비물이 필요하다:
 
 * 도메인
   * 이메일용 + 피싱 페이지용 도메인 1개 (Namecheap) - https://www.namecheap.com/
@@ -66,19 +65,19 @@ Postfix 메일 서버와 ZOHO와 같은 서드파티 메일 서버의 차이점�
 
 DNSTWIST를 통해 그루트 도메인 grootboan.com과 비슷하지만 다른? 도메인을 찾는다. 이번 실습에서는 boan의 a와 o를 바꿔 grootbaon.com을 구매했다.
 
-![](<../.gitbook/assets/Pasted image 20230414153642 (1) (1).png>)
+![](<../.gitbook/assets/Pasted image 20230414153642 (1) (1) (1) (2) (3).png>)
 
 Namecheap에 들어가 grootbaon.com을 확인하여 구매한다.
 
 ![](<../.gitbook/assets/Pasted image 20230414153807 (1).png>) ![](<../.gitbook/assets/Pasted image 20230414154219.png>)
 
-### GoPhish 호스팅  AWS EC2 서버 구축
+### GoPhish 호스팅 AWS EC2 서버 구축
 
 적절한 도메인을 구입했다면 이제 AWS와 같은 클라우드 VM 호스팅 서비스를 이용해서 GoPhish (피싱 메일 전송 서비스)를 구축한다. AWS는 처음 12개월 프리 티어를 제공하므로 본 실습에서는 AWS를 사용한다.
 
 ![](../Pasted%20image%2020230420112753.png)
 
-일단 아래 링크에서 무료 계정을 생성해 12개월 무료 티어 계정을 만든다.&#x20;
+일단 아래 링크에서 무료 계정을 생성해 12개월 무료 티어 계정을 만든다.
 
 {% embed url="https://aws.amazon.com/ko/free/" %}
 
@@ -93,13 +92,13 @@ AWS EC2 웹 서비스를 아래와 같은 스펙으로 설정하여 생성한다
 
 다음과 같이 EC2를 생성해준다.
 
-![](<../.gitbook/assets/Pasted image 20230416194114 (1) (1).png>)
+![](<../.gitbook/assets/Pasted image 20230416194114 (1) (1) (1) (2) (3).png>)
 
-안전하고 Private한 연결을 위해 SSH 키 페어를 설정해준다.&#x20;
+안전하고 Private한 연결을 위해 SSH 키 페어를 설정해준다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230416195853 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-물론 나중에 세팅이 완료되면 디테일한 방화벽 설정이 필요하지만 스무스한 진행을 위해 방화벽은 따로 설정하지 않기로 한다.&#x20;
+물론 나중에 세팅이 완료되면 디테일한 방화벽 설정이 필요하지만 스무스한 진행을 위해 방화벽은 따로 설정하지 않기로 한다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230416194249 (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -111,7 +110,7 @@ AWS EC2 웹 서비스를 아래와 같은 스펙으로 설정하여 생성한다
 
 위 EC2 서버 설정에서 만들었던 SSH Private Key를 통해 고피시 서버에 연결한다.
 
-![](<../.gitbook/assets/Pasted image 20230416195949 (1) (1).png>)
+![](<../.gitbook/assets/Pasted image 20230416195949 (1) (1) (1) (2) (4).png>)
 
 이제 고피쉬를 설정한다.
 
@@ -139,7 +138,7 @@ GoPhish는 디폴트로 여러 증거를 남길수 있기때문에 OPSEC 차원�
 
 ![](<../.gitbook/assets/Pasted image 20230417093609 (1) (1) (1).png>)
 
-아래 sign up 링크에서 ZOHO 계정 만든다.&#x20;
+아래 sign up 링크에서 ZOHO 계정 만든다.
 
 {% embed url="https://www.zoho.com/signup.html" %}
 
@@ -153,25 +152,25 @@ Proceed to domain verification 누른뒤 AWS Route 53으로 돌아온뒤 아래�
 
 ### AWS Route53 DNS 설정정
 
-1. Route53에서 호스팅 영역 -> 호스팅 영역 생성을 선택한다.&#x20;
+1. Route53에서 호스팅 영역 -> 호스팅 영역 생성을 선택한다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417110256.png" alt=""><figcaption></figcaption></figure>
 
-2. 구매한 도메인 이름으로 다음과 같이 호스팅 영역을 만들어준다.&#x20;
+2. 구매한 도메인 이름으로 다음과 같이 호스팅 영역을 만들어준다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417110340.png" alt=""><figcaption></figcaption></figure>
 
-3. NS와 SOA 레코드가 생성되면 NS 레코드 값을 복사한뒤 Namecheap 도메인 설정에서 Nameserver를 Custom DNS로 바꾼뒤 위의 AWS NS 레코드 값으로 바꿔 준다.&#x20;
+3. NS와 SOA 레코드가 생성되면 NS 레코드 값을 복사한뒤 Namecheap 도메인 설정에서 Nameserver를 Custom DNS로 바꾼뒤 위의 AWS NS 레코드 값으로 바꿔 준다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417175031.png" alt=""><figcaption></figcaption></figure>
 
 ![](<../.gitbook/assets/Pasted image 20230417111036.png>)
 
-다음과 같이 성공적으로 연결되면 Domain Ownership 테스트는 통과다.&#x20;
+다음과 같이 성공적으로 연결되면 Domain Ownership 테스트는 통과다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417100526.png" alt=""><figcaption></figcaption></figure>
 
-4. ZOHO 무료버전은 계정 5개까지 무료이므로 다음과 같이 피슁에 쓰일 이메일을 만들어 줄수 있다. 여기서는 가짜 Instagram 서포트 계정으로 보일 만한 테스팅 이메일 instagram.support를 만들어 보았다.&#x20;
+4. ZOHO 무료버전은 계정 5개까지 무료이므로 다음과 같이 피슁에 쓰일 이메일을 만들어 줄수 있다. 여기서는 가짜 Instagram 서포트 계정으로 보일 만한 테스팅 이메일 instagram.support를 만들어 보았다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417165626.png" alt=""><figcaption></figcaption></figure>
 
@@ -231,39 +230,38 @@ ping login.grootbaon.com을 실행해 login.grootbaon.com이 AWS EC2 퍼블릭 �
 
 #### Sending Profile 설정
 
-* Name: <프로필 이름 아무거나>&#x20;
-* SMTP From: instagram.support@grootbaon.com&#x20;
-* Host: smtp.zoho.coom.au:465 Username/Password: \<ZOHO instagram.support@grootbaon.com Username/Password>&#x20;
+* Name: <프로필 이름 아무거나>
+* SMTP From: instagram.support@grootbaon.com
+* Host: smtp.zoho.coom.au:465 Username/Password: \<ZOHO instagram.support@grootbaon.com Username/Password>
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417174314.png" alt=""><figcaption></figcaption></figure>
 
-테스팅겸 Send Test Email을 눌러 이메일을 보내본다.&#x20;
+테스팅겸 Send Test Email을 눌러 이메일을 보내본다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417112001.png" alt=""><figcaption></figcaption></figure>
 
-정상적으로 이메일이 온거를 확인하면 성공이다.&#x20;
+정상적으로 이메일이 온거를 확인하면 성공이다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417112055.png" alt=""><figcaption></figcaption></figure>
 
 #### Landing Pages 설정
 
-
 Landing Pages에서는 피싱 피해자가 피싱 메일이 유도하는 피싱 페이지를 방문할때 보이는 페이지를 뜻한다. 본 실습에서는 "Instagram 계정 탈취"를 가정해 아래와 같이 설정해주었다.
 
 본 실습이 교육의 목적인 만큼 여기에 쓰인 인스타그램 로그인 페이지 소스는 따로 공유할수 없지만 피싱 템플릿은 어느정도 본 페이지의 HTML과 CSS 소스를 레퍼런스 떠와 만들수 있겠다.
 
-* Name: Instagram HTML: <피싱 템플릿 HTML 코드>&#x20;
-* Capture Submitted Data 활성화&#x20;
-* Capture Passwords 활성화&#x20;
+* Name: Instagram HTML: <피싱 템플릿 HTML 코드>
+* Capture Submitted Data 활성화
+* Capture Passwords 활성화
 * Redirect to: https://www.instagram.com
 
 ![](<../.gitbook/assets/Pasted image 20230417113600.png>)
 
-아래와 같이 돋보기 아이콘을 눌러주면 템플릿을 미리보기 할수 있다.&#x20;
+아래와 같이 돋보기 아이콘을 눌러주면 템플릿을 미리보기 할수 있다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417113719.png" alt=""><figcaption></figcaption></figure>
 
-아래와 같은 피싱 템플릿이 사용되는걸 미리 확인할 수 있다.&#x20;
+아래와 같은 피싱 템플릿이 사용되는걸 미리 확인할 수 있다.
 
 <figure><img src="../.gitbook/assets/Pasted image 20230417185053.png" alt=""><figcaption></figcaption></figure>
 
@@ -279,7 +277,7 @@ Landing Pages에서는 피싱 피해자가 피싱 메일이 유도하는 피싱 
 
 #### Users & Groups 설정
 
-피싱 피해자의 이메일 리스트를 작성해준다.&#x20;
+피싱 피해자의 이메일 리스트를 작성해준다.
 
 * Group Name: Instagram victim lists
 

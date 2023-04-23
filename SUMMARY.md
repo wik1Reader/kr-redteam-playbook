@@ -157,7 +157,7 @@
 * [WMI](lateral-movement/wmi.md)
 * [WinRM / Powershell Remoting](lateral-movement/winrm-ps-remoting.md)
 * [RDP](lateral-movement/rdp.md)
-* [SSH 포워딩/터널](lateral-movement/ssh-tunnel.md)
+* [SSH Port Forwarding & Tunneling](lateral-movement/ssh-tunnel.md)
 * [Network Pivoting (피벗) - TODO](lateral-movement/pivoting.md)
 
 ## 🏭 주요정보통신기반시설 취약점 분석 <a href="#critical-info-infrastructure" id="critical-info-infrastructure"></a>
@@ -180,7 +180,7 @@
 
 * [개념](real-attack-ttp-and-mitigations/concepts.md)
 
-## 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
+## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
 
 * [시스몬 (sysmon) 설치](homelab/installing-sysmon.md)
 * [SIEM과 EDR 솔루션 설치](homelab/edr.md)

@@ -1,12 +1,14 @@
-``# HTTP 리다이렉터 설정
+# HTTP 리다이렉터
 
-이 페이지에서는 [example-infra.md](example-infra.md "mention")  의 개념을 참고해 레드팀 작전시 필요한 팀서버 및 HTTP 리다이렉터 (Redirector)를 AWS를 이용해 레드팀 공간과 그레이 공간에 설치해본다.
+\`\`# HTTP 리다이렉터 설정
 
-### 개요
+이 페이지에서는 [example-infra.md](example-infra.md "mention") 의 개념을 참고해 레드팀 작전시 필요한 팀서버 및 HTTP 리다이렉터 (Redirector)를 AWS를 이용해 레드팀 공간과 그레이 공간에 설치해본다.
+
+#### 개요
 
 이 페이지에서는 다음과 같은 인프라를 구축한다.
 
-<figure><img src="../.gitbook/assets/http-redirector-infra.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 해당 인프라는 비컨이 팀서버에 직접적으로 콜백하지 않고, 클라우드에 있는 리다이렉터를 거쳐 레드팀존의 팀서버로 콜백이 되게끔 설정한 아주 간단한 인프라다. 비컨과 레드팀 팀서버의 네트워크 트래픽은 아래와 같이 일어나게 된다.
 
@@ -27,7 +29,7 @@
 
 오퍼레이터가 물리적으로 접근 가능한 ("내 컴퓨터", "내 노트북") 호스트의 하이퍼바이저에 레드팀 공간을 만든다. 홈랩의 경우 그냥 이미 설치해놨던 칼리 리눅스를 사용하면 된다. 그 뒤, AWS를 이용해 VPC, 서브넷, 방화벽 설정을 마친 뒤, EC2 인스턴스를 1개 생성해 리다이렉터 서버를 구축한다. 마지막으로 타겟 호스트에서 비컨을 실행해 해당 비컨이 팀서버까지 도달할 수 있는지를 확인하며 실습을 마친다.
 
-### 레드팀 공간 설정
+#### 레드팀 공간 설정
 
 1. 하이퍼바이저와 가상머신 오퍼레이터가 실제로 사용할 가상머신을 하이퍼바이저 안에 설치한다. 이 부분은 스킵한다. 대부분 오펜시브 시큐리티에 관심이 있다면 버츄얼박스나 VMWare player/workstation 안에 칼리 리눅스를 사용하고 있을테니, 그것을 사용하면 된다.
 2. C2 프레임워크 설치 Sliver, Mythic 설치해도 되지만 이번 실습에서는 비교적 최근에 나온 [Havoc Framework](https://github.com/HavocFramework/Havoc)를 #1번의 가상머신에 설치한다. 물론, 자신이 원하는 C2 프레임워크(Cobalt Strike, Brute Ratel, Nighthawk, 등)를 아무거나 설치해도 상관없다.
@@ -71,7 +73,7 @@ user: C5pider
 password: password1234 
 ```
 
-### 그레이 공간 설정
+#### 그레이 공간 설정
 
 그레이 공간은 AWS를 이용할 것이며, 다음의 설정들을 하면 된다.
 
@@ -79,7 +81,7 @@ password: password1234
 2. SSH 키 생성 및 설정
 3. EC2 인스턴스 생성 및 리다이렉터 서버 설정
 
-\---&#x20;
+\---
 
 1. 레드팀 전용 서브넷 생성 VPC 서비스를 검색한 뒤 왼쪽의 "서브넷"을 클릭해 이번 실습 전용 서브넷을 생성한다. 이번 실습에서는 다음과 같은 설정을 했다.
 
@@ -129,7 +131,7 @@ drwx------ 43 root root 4.0K Apr  9 20:22 ..
 
 <figure><img src="../.gitbook/assets/aws9-ec2-publicip.png" alt=""><figcaption></figcaption></figure>
 
-### 리다이렉터 서버 설정
+#### 리다이렉터 서버 설정
 
 SSH 키를 이용해 리다이렉터 서버에 접속이 가능한지 확인한다. 만약 접속이 되지 않을 경우, 다시 한 번 보안그룹 (방화벽) 설정에서 tcp/22 를 허용하고 있는지, 생성한 서브넷이 "퍼블릭 IPv4 주소 자동 할당 활성화" 가 설정되어 있는지, SSH 키는 적용을 했는지 등을 다시 한 번 확인한다.
 
@@ -177,7 +179,7 @@ hello from redteam zone, through redirector!
 
 신기하다, 분명히 `hi.txt` 파일은 레드팀, 본인의 가상머신에서 만든 파일이다. 리다이렉터에는 해당 파일이 존재하지 않는다. 그럼에도 불구하고 `http://리다이렉터:443/hi.txt` 를 방문하면, 오히려 레드팀 호스트의 `hi.txt` 파일이 반환된다. 이는 리다이렉터 덕분이다.
 
-### C2 리다이렉트 실습
+#### C2 리다이렉트 실습
 
 이번에는 포트 80 HTTP를 이용해 실습을 진행한다.
 
@@ -197,7 +199,7 @@ sudo socat tcp-listen:80,reuseaddr,fork,bind=0.0.0.0 tcp:127.00.1:2222
 ssh -i <ssh키> ec2-user@<리다이렉트IP> -R 2222:127.0.0.1:80
 ```
 
-3. 레드팀 호스트 - 하복 프레임워크에서 리스너와 에이전트 생성&#x20;
+3. 레드팀 호스트 - 하복 프레임워크에서 리스너와 에이전트 생성
 
 View -> Listeners 로 가 HTTP 리스너를 생성한다. Host에는 꼭 리다이렉터의 공개 IP 주소를 설정해준다. Host(Bind) 에서도 꼭 `0.0.0.0` 을 설정해줘야한다. 트래픽이 SSH 리모트 터널을 통해서 들어올 때 `127.0.0.1` 주소로 들어오기 때문이다.
 
@@ -211,7 +213,6 @@ Attack -> Payloads 로 가 페이로드를 생성한 뒤 타겟 호스트에서 
 
 <figure><img src="../.gitbook/assets/havoc-success.PNG" alt=""><figcaption></figcaption></figure>
 
-### 마치며
+#### 마치며
 
 이번 페이지에서는 간단한 레드팀 공간 설정, 그레이 공간 설정 및 클라우드에서 리다이렉터 서버 운영 등에 대해서 알아봤다. 추후 도메인, HTTPS, certbot을 이용한 HTTPS 리다이렉팅을 시도해도 되고, 이 모든 과정을 테라폼으로 만들어 자동화를 진행할 수도 있을 것이다. 또한, 지금은 간단하게 하기 위해 socat을 이용한 리다이렉팅을 했지만 좀 더 세분화되고 고급 리다이렉팅을 위해서는 리버스 프록시나 nginx/apache 등을 통한 URL/URI/User-Agent/IP 화이트리스트 등을 진행할 수도 있다. 이것은 추후 다른 페이지에서 다룬다.
-
