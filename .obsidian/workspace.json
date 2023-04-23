@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b69c505763c07371",
+        "id": "620b74855a3bc111",
         "type": "tabs",
         "children": [
           {
-            "id": "00557fd637ddd4d5",
+            "id": "3f0a76c75889a7ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-04-23.md",
+                "file": "what-even-is-redteam.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-04-23.md",
+                "file": "what-even-is-redteam.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-04-23.md",
+                "file": "what-even-is-redteam.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-04-23.md"
+                "file": "what-even-is-redteam.md"
               }
             }
           }
@@ -147,11 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "00557fd637ddd4d5",
+  "active": "3f0a76c75889a7ed",
   "lastOpenFiles": [
+    "SUMMARY.md",
     "Untitled.canvas",
     "2023-04-23.md",
-    "로컬 및 리모트 포워딩으로 SSH 터널 만들기.md",
+    "lateral-movement/ssh-tunnel.md",
+    "lateral-movement/wmi.md",
     "obsidian_resources/Pasted image 20230423154942.png",
     "obsidian_resources/Pasted image 20230423153520.png",
     "obsidian_resources/Pasted image 20230423152135.png",
