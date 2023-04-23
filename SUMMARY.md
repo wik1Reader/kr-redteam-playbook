@@ -157,7 +157,7 @@
 * [WMI](lateral-movement/wmi.md)
 * [WinRM / Powershell Remoting](lateral-movement/winrm-ps-remoting.md)
 * [RDP](lateral-movement/rdp.md)
-* [SSH 터널](lateral-movement/ssh-tunnel.md)
+* [SSH 포워딩/터널](lateral-movement/ssh-tunnel.md)
 * [Network Pivoting (피벗) - TODO](lateral-movement/pivoting.md)
 
 ## 🏭 주요정보통신기반시설 취약점 분석 <a href="#critical-info-infrastructure" id="critical-info-infrastructure"></a>
