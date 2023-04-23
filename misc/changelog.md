@@ -49,3 +49,5 @@
 4/18 -   [SMTP GoPhish (AWS + ZOHO)](../infrastructure/smtp-aws-zoho.md)   페이지 추가 - [@nanentp](ttps://github.com/nanentp)
 
 4/19 - [https-redirector.md](../infrastructure/https-redirector.md "mention")페이지 추가&#x20;
+
+4/22 - [취약한 랩을 위한 설정 커맨드](https://www.xn--hy1b43d247a.com/homelab/homelab-misconfigurations) - SCCM 삽질과 간단 레퍼런스 추가&#x20;
