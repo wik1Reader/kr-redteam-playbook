@@ -75,8 +75,6 @@ Namecheap에 들어가 grootbaon.com을 확인하여 구매한다.
 
 적절한 도메인을 구입했다면 이제 AWS와 같은 클라우드 VM 호스팅 서비스를 이용해서 GoPhish (피싱 메일 전송 서비스)를 구축한다. AWS는 처음 12개월 프리 티어를 제공하므로 본 실습에서는 AWS를 사용한다.
 
-![](../Pasted%20image%2020230420112753.png)
-
 일단 아래 링크에서 무료 계정을 생성해 12개월 무료 티어 계정을 만든다.
 
 {% embed url="https://aws.amazon.com/ko/free/" %}
@@ -114,21 +112,22 @@ AWS EC2 웹 서비스를 아래와 같은 스펙으로 설정하여 생성한다
 
 이제 고피쉬를 설정한다.
 
-`apt update -y ; apt install golang-go gcc -y`cd /opt
-
-`git clone https://github.com/gophish/gophish.git`
-
-`cd ./gophish`
+```sh
+apt update -y ; apt install golang-go gcc -y;cd /opt
+git clone https://github.com/gophish/gophish.git
+cd ./gophish
+```
 
 GoPhish는 디폴트로 여러 증거를 남길수 있기때문에 OPSEC 차원에서 GoPhish가 만들어내는 트래픽에 남는 여러 스트링을 아래와 같이 바꿔줄수있다 .
 
-`find . -type f -name "config.go" -exec sed -i 's/const ServerName = "gophish"/const ServerName = "IGNORE"/g' {} +`
+```shell
+find . -type f -name "config.go" -exec sed -i 's/const ServerName = "gophish"/const ServerName = "IGNORE"/g' {} +
+find . -type f -name "campaign.go" -exec sed -i 's/const RecipientParameter = "rid"/const RecipientParameter = "keyname"/g' {} +
+find . -type f -exec sed -i 's/X-Gophish-Contact/X-Contact/g; s/X-Gophish-Signature/X-Signature/g' {} +
+go build
+```
 
-`find . -type f -name "campaign.go" -exec sed -i 's/const RecipientParameter = "rid"/const RecipientParameter = "keyname"/g' {} +`
 
-`find . -type f -exec sed -i 's/X-Gophish-Contact/X-Contact/g; s/X-Gophish-Signature/X-Signature/g' {} +`
-
-`go build`
 
 모든 과정이 에러없이 완료 되었다면 모든 GoPhish 설정은 다 끝났다.
 
@@ -208,11 +207,11 @@ ping login.grootbaon.com을 실행해 login.grootbaon.com이 AWS EC2 퍼블릭 �
 
 이제 GoPhish 서버에서 나와 다시 SSH 연결을 해줄건데 이번에는 IP 대신login.grootbaon.com으로 로컬 포트 포워딩으로 로컬 호스트 3333에서 바로 연결이 될수 있게 다음과 같이 SSH 연결을 해준다.
 
-\`ssh -i id\_rsa root@login.koreambtihealth.com -L 3333:127.0.0.1:3333
+`ssh -i id_rsa ubuntu@login.grootbaon.com -L 3333:127.0.0.1:3333`
 
 이제 고피시 실행한뒤 뒤 나오는 비밀번호를 이용해 호스트에서 `https://localhost:3333` 로 접속한다.
 
-\`sudo ./gophish
+`sudo ./gophish`
 
 ![](<../.gitbook/assets/Pasted image 20230417111503.png>)
 
