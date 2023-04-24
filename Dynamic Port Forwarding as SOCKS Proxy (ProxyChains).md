@@ -25,22 +25,22 @@
 
 
 예를 들면, 아래와 같은 경우 사용자의 인터넷 검열을 통해 일부 웹 사이트 및 서비스에 액세스가 제한되는 경우다. 따라서, security.grootboan.com을 열람하지 못한다.
-![](obsidian_resources/Pasted%20image%2020230424114206.png)
+![](../obsidian_resources/Pasted%20image%2020230424114206.png)
 
 
  이런 경우에 SSH를 사용하여 로컬 시스템의 인터넷 트래픽을 SSH 서버로 전달하면, 사용자는  제한된 콘텐츠에 액세스할 수 있다. 다음 다이어그램으로 하나씩 설명을 해보자.
-![](obsidian_resources/Pasted%20image%2020230424115734.png)
+![](../obsidian_resources/Pasted%20image%2020230424115734.png)
 
 
 
-![](obsidian_resources/Pasted%20image%2020230424121933.png)
+![](../obsidian_resources/Pasted%20image%2020230424121933.png)
 
 첫번쨰로 방화벽 우회를 하고자 하는 타겟에서 아래의 커맨드를 통해  localhost의 포트 9090을 바인딩하고 이 포트로 전송되는 모든 트래픽을 REMOTE_SERVER_IP로 릴레이한다는 뜻이다. 
 ```sh
 ssh -D 127.0.0.1:9090 admin@REMOTE_SERVER_IP
 ```
 
-![](obsidian_resources/Pasted%20image%2020230424122154.png)
+![](../obsidian_resources/Pasted%20image%2020230424122154.png)
 
 리모트 서버는 인터넷 접근에 제한이 없는 호스트면 된다. 이 실습에서는 저번과 같이 Digital Ocean에서 기본 Public VPS를 만들어 쓴다.
 
@@ -52,11 +52,11 @@ ssh -D 127.0.0.1:9090 admin@REMOTE_SERVER_IP
 
 어쨋든 Firefox 설정으로 들어가 다음과 같이 Proxy를 설정해 준다.
 
-![](obsidian_resources/Pasted%20image%2020230424120937.png)
+![](../obsidian_resources/Pasted%20image%2020230424120937.png)
 
 이제 브라우저를 Refresh 하여, MY IP를 알아보면 VPS 아이피로 인식하는 것을 알 수 있다. 
 
-![](obsidian_resources/Pasted%20image%2020230424122254.png)
+![](../obsidian_resources/Pasted%20image%2020230424122254.png)
 
 이로써 다이나믹 포트 포워딩을 이용하여 SOCKS Proxy 설정법에 대해서 다뤄봤다.
 
@@ -108,20 +108,20 @@ proxychains4 환경설정 CONFIG 파일을 다음과 같이설정한다.
 vi /etc/proxychains4.conf
 ```
 
-![](obsidian_resources/Pasted%20image%2020230424140932.png)
+![](../obsidian_resources/Pasted%20image%2020230424140932.png)
 
 원하는 포트에 대한 SSH 리모트 포워딩을 생성한 다음 이 포트를 proxychains.conf에 추가하면 끝이다.
 
-![](obsidian_resources/Pasted%20image%2020230424122154.png)
+![](../obsidian_resources/Pasted%20image%2020230424122154.png)
 
 . 브라우저는 No Proxy Setting으로 돌려준다.
 
-![](obsidian_resources/Pasted%20image%2020230424143815.png)
+![](../obsidian_resources/Pasted%20image%2020230424143815.png)
 
 이제 proxychains롤 통해 Firefox 브라우저를 실행하여 현재 공요 IP를 찾아보면 Remote Server IP로 뜨는것을 확인할 수 있다.
 
-![](obsidian_resources/Pasted%20image%2020230424141339.png)
-![](obsidian_resources/Pasted%20image%2020230424141407.png)
+![](../obsidian_resources/Pasted%20image%2020230424141339.png)
+![](../obsidian_resources/Pasted%20image%2020230424141407.png)
 
 ### 실제 공격 데모
 실제 데모를 위해  Digital Ocean에 공격자와 타겟 박스를 각각 만들었다.
@@ -132,10 +132,10 @@ vi /etc/proxychains4.conf
 
 이제 209.38.242.65을 스캔하기 위해 Proxychains를 통해 nmap을 실행하는 예다.
 
-![](obsidian_resources/Pasted%20image%2020230424142005.png)
+![](../obsidian_resources/Pasted%20image%2020230424142005.png)
 
 타겟 IP: 209.38.242.65에는 실제 공격자의 IP가 아닌 프록시 IP 209.38.230.24가 보이는걸 확인할 수 있다.
-![](obsidian_resources/Pasted%20image%2020230424142512.png)
+![](../obsidian_resources/Pasted%20image%2020230424142512.png)
 
 ## 마치며
 
