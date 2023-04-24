@@ -139,4 +139,6 @@ vi /etc/proxychains4.conf
 
 ## 레퍼런스
 
-https://posts.specterops.io/offensive-security-guide-to-ssh-tunnels-and-proxies-b525cbd4d4c6 https://medium.com/swlh/proxying-like-a-pro-cccdc177b081 https://www.ired.team/offensive-security/lateral-movement/ssh-tunnelling-port-forwarding
+https://posts.specterops.io/offensive-security-guide-to-ssh-tunnels-and-proxies-b525cbd4d4c6
+
+https://medium.com/swlh/proxying-like-a-pro-cccdc177b081 https://www.ired.team/offensive-security/lateral-movement/ssh-tunnelling-port-forwarding
