@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8ee5ce9c5c43ec9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lateral-movement/ssh-tunnel.md",
+                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "lateral-movement/ssh-tunnel.md",
+                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lateral-movement/ssh-tunnel.md"
+                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md"
               }
             }
           }
@@ -146,25 +159,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3f0a76c75889a7ed",
+  "active": "8ee5ce9c5c43ec9b",
   "lastOpenFiles": [
+    "obsidian_resources/Pasted image 20230424143815.png",
+    "obsidian_resources/Pasted image 20230424142512.png",
+    "obsidian_resources/Pasted image 20230424142005.png",
+    "obsidian_resources/Pasted image 20230424141407.png",
+    "obsidian_resources/Pasted image 20230424141339.png",
+    "obsidian_resources/Pasted image 20230424140932.png",
+    "obsidian_resources/Pasted image 20230424122254.png",
+    "obsidian_resources/Pasted image 20230424122218.png",
+    "obsidian_resources/Pasted image 20230424122154.png",
+    "obsidian_resources/Pasted image 20230424121933.png",
+    "obsidian_resources/Pasted image 20230424120937.png",
+    "lateral-movement/ssh-tunnel.md",
+    "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
     "what-even-is-redteam.md",
     "SUMMARY.md",
     "Untitled.canvas",
     "2023-04-23.md",
-    "lateral-movement/ssh-tunnel.md",
     "lateral-movement/wmi.md",
-    "obsidian_resources/Pasted image 20230423154942.png",
-    "obsidian_resources/Pasted image 20230423153520.png",
-    "obsidian_resources/Pasted image 20230423152135.png",
-    "obsidian_resources/Pasted image 20230423151213.png",
-    "obsidian_resources/Pasted image 20230423151148.png",
-    "obsidian_resources/Pasted image 20230423150920.png",
     "infrastructure/http-redirector.md",
-    "obsidian_resources/Pasted image 20230422195639 1.png",
-    "obsidian_resources/Pasted image 20230422195639.png",
-    "obsidian_resources/Pasted image 20230422194954.png",
-    "obsidian_resources/Pasted image 20230422194936.png",
     "infrastructure/groot.md",
     "homelab/cuckoo.md",
     "infrastructure/smtp-aws-zoho.md",
