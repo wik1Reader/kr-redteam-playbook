@@ -127,13 +127,17 @@ vi /etc/proxychains4.conf
 * SOCKS 프록시 IP: 209.38.230.24
 * 타겟 IP: 209.38.242.65
 
-이제 209.38.242.65을 스캔하기 위해 Proxychains를 통해 nmap을 실행하는 예다.
+209.38.242.65을 스캔하기 위해 Proxychains를 통해 nmap을 실행한다.
 
 ![](<../obsidian\_resources/Pasted image 20230424142005.png>)
 
 타겟 IP: 209.38.242.65에는 실제 공격자의 IP가 아닌 프록시 IP 209.38.230.24가 보이는걸 확인할 수 있다.&#x20;
 
 <figure><img src="../obsidian_resources/Pasted image 20230424142512.png" alt=""><figcaption></figcaption></figure>
+
+#### 최종 우회 시나리오
+
+<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 ## 마치며
 
