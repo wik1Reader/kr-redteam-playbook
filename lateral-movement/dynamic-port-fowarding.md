@@ -85,15 +85,17 @@ ProxyChains는 애플리케이션에서 만든 모든 TCP 연결을 모두 SOCKS
 
 ProxyChains를 설치하는 법은 간단하다.
 
-https://github.com/haad/proxychains
+{% embed url="https://github.com/haad/proxychains" %}
 
 ```sh
 sudo apt-get install proxychains
 ```
 
-윈도우 버전도 제공하니 참고 바란다. https://github.com/shunf4/proxychains-windows
+윈도우 버전도 제공하니 참고 바란다.&#x20;
 
-#### 설정
+{% embed url="https://github.com/shunf4/proxychains-windows" %}
+
+#### Proxychains 설정및 실행행
 
 proxychains4 환경설정 CONFIG 파일을 다음과 같이설정한다.
 
@@ -139,6 +141,11 @@ vi /etc/proxychains4.conf
 
 ## 레퍼런스
 
-https://posts.specterops.io/offensive-security-guide-to-ssh-tunnels-and-proxies-b525cbd4d4c6
+{% embed url="https://posts.specterops.io/offensive-security-guide-to-ssh-tunnels-and-proxies-b525cbd4d4c6" %}
 
-https://medium.com/swlh/proxying-like-a-pro-cccdc177b081 https://www.ired.team/offensive-security/lateral-movement/ssh-tunnelling-port-forwarding
+{% embed url="https://medium.com/swlh/proxying-like-a-pro-cccdc177b081" %}
+
+{% embed url="https://www.ired.team/offensive-security/lateral-movement/ssh-tunnelling-port-forwarding" %}
+
+
+
