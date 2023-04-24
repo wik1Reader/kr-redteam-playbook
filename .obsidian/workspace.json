@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
+                "file": "SUMMARY.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
+                "file": "SUMMARY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
+                "file": "SUMMARY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md"
+                "file": "SUMMARY.md"
               }
             }
           }
@@ -161,6 +161,10 @@
   },
   "active": "8ee5ce9c5c43ec9b",
   "lastOpenFiles": [
+    "README.md",
+    "lateral-movement/dynamic-port-fowarding.md",
+    "SUMMARY.md",
+    "lateral-movement/ssh-tunnel.md",
     "obsidian_resources/Pasted image 20230424143815.png",
     "obsidian_resources/Pasted image 20230424142512.png",
     "obsidian_resources/Pasted image 20230424142005.png",
@@ -171,11 +175,7 @@
     "obsidian_resources/Pasted image 20230424122218.png",
     "obsidian_resources/Pasted image 20230424122154.png",
     "obsidian_resources/Pasted image 20230424121933.png",
-    "obsidian_resources/Pasted image 20230424120937.png",
-    "lateral-movement/ssh-tunnel.md",
-    "Dynamic Port Forwarding as SOCKS Proxy (ProxyChains).md",
     "what-even-is-redteam.md",
-    "SUMMARY.md",
     "Untitled.canvas",
     "2023-04-23.md",
     "lateral-movement/wmi.md",

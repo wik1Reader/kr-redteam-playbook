@@ -158,6 +158,7 @@
 * [WinRM / Powershell Remoting](lateral-movement/winrm-ps-remoting.md)
 * [RDP](lateral-movement/rdp.md)
 * [SSH Port Forwarding & Tunneling](lateral-movement/ssh-tunnel.md)
+* [Dynamic Port Forwarding & ProxyChains](lateral-movement/dynamic-port-fowarding.md)
 * [Network Pivoting (피벗) - TODO](lateral-movement/pivoting.md)
 
 ## 🏭 주요정보통신기반시설 취약점 분석 <a href="#critical-info-infrastructure" id="critical-info-infrastructure"></a>
