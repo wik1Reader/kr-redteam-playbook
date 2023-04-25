@@ -2,11 +2,11 @@
 
 ## 개념
 
-도메인 프론팅은 CDN (Content Delivery Network) 안의 호스트드을 대상으로 HTTPS 요청의 SNI (Server Name Indiction)에는 허용된 도메인의 이름을 지정한 뒤, HTTP의 요청 헤더 중 Host 에는 접근 불가능한 도착 도메인을 특정해 네트워크 트래픽 검열 및 감시를 피하는 기법 중 하나다. 2018년도 이후로는 도메인 프론팅 자체를 막아버린 CDN 플랫폼들이 많아서 (CloudFront, Akamai, Azure 등...) 더이상 많이 사용되지는 않지만, 그래도 꾸준히 레드팀이나 공격자들이 사용하는 기법이다.
+도메인 프론팅은 CDN (Content Delivery Network) 안의 호스트들을 대상으로 HTTPS 요청의 SNI (Server Name Indiction)에는 허용된 도메인의 이름을 지정한 뒤, HTTP의 요청 헤더 중 Host 에는 원래는 접근 불가능한 도메인을 특정해 네트워크 트래픽 검열 및 감시를 피하는 기법 중 하나다. 2018년도 이후로는 도메인 프론팅 자체를 막아버린 CDN 플랫폼들이 많아서 (CloudFront, Akamai, Azure 등) 더이상 많이 사용되지는 않지만, 그래도 꾸준히 레드팀이나 공격자들이 사용하는 기법이다.
 
 <figure><img src="../.gitbook/assets/domainfronting.drawio.png" alt=""><figcaption></figcaption></figure>
 
-Content Delivery Network (CDN) 은 전세계에 고객들이 원하는 데이터와 리소스들을 빠르게 배포하기 위해서 다양한 DNS CNAME 레코드들을 사용한다. 예를 들어 네이버사에서 이미지를 호스팅 할 때 `image.naver.com` 은 Fastly 라는 CDN 회사의 다양한 서버들 (`korea.prod.fastly.net`, `us-east-2.prod.fastly.net`) 에 CNAME 레코드를 구축해 한국과 미국의 유저들에게 빠르게 이미지를 배포할 수 있게 된다. 예를 들어, `image.naver.com` 은 `naver.com.korea.prod.fastly.net` 이라던지 `naver.com.us-east-2.prod.fastly.net` 등의 CNAME 레코드를 갖게 된다.
+Content Delivery Network (CDN) 은 전세계 고객들이 원하는 데이터와 리소스들을 빠르게 배포하기 위해 다양한 DNS CNAME 레코드들을 사용한다. 예를 들어 네이버사에서 이미지를 호스팅 할 때 `image.naver.com` 은 Fastly 라는 CDN 회사의 다양한 서버들 (`korea.prod.fastly.net`, `us-east-2.prod.fastly.net`) 에 CNAME 레코드를 구축해 한국과 미국의 유저들에게 빠르게 이미지를 배포할 수 있게 된다. 예를 들어, `image.naver.com` 은 `naver.com.korea.prod.fastly.net` 이라던지 `naver.com.us-east-2.prod.fastly.net` 등의 CNAME 레코드를 갖게 된다.
 
 HTTPS SNI와 HTTP Host 헤더의 동일함 (TLS 인증서 등)을 체크하지 않는 CDN 플랫폼의 경우 HTTPS SNI는 정상적인 도메인 (예. `image.naver.com` -> `naver.com.korea.prod.fastly.net`) 을 지정해놓고, HTTP Host 헤더는 공격자의 도메인 CNAME (예. `attacker.com.korea.prod.fastly.net`) 를 지정해놓으면, CDN 회사는 트래픽을 최종적으로 공격자의 호스트 `www.attacker.com` 에 배달을 해준다.
 
@@ -16,8 +16,6 @@ HTTPS SNI와 HTTP Host 헤더의 동일함 (TLS 인증서 등)을 체크하지 �
 
 ```
 └─# nslookup -type=CNAME www.safe.com
-Server:         192.168.40.2
-Address:        192.168.40.2#53
 
 Non-authoritative answer:
 www.safe.com  canonical name = safe.com.global.prod.fastly.net.
@@ -29,27 +27,27 @@ www.safe.com  canonical name = safe.com.global.prod.fastly.net.
 2. `www.safe.com` 은 `safe.com.global.prod.fastly.net` 이라는 CNAME 레코드를 갖고 있다.
 3. `safe.com.global.prod.fastly.net` 의 A 레코드는 Fastly 사에서 운영중인 서버의 IP 주소 (예를 들어 `1.1.1.1`) 를 갖고 있다.
 4. 타겟은 이제 `1.1.1.1` 로 자신의 HTTPS 트래픽을 보낸다.
-5. Fastly 사의 `1.1.1.1` 서버는 TLS Handshake 를 시작한다.
-6. TLS Handshake가 끝난 뒤, Connection 이 구축되면 이제 HTTP 파싱을 진행한다.
-7. 어라, HTTP의 Host 헤더에는 `attacker.com.global.prod.fastly.net` 가 있다. 자신의 CDN 네트워크를 뒤져본다. 아하, 공격자가 이미 등록해놨던 `attacker.com.global.prod.fastly.net` CNAME을 찾아낸다. "우리 CDN 네트워크에 존재하는 호스트구나!"
+5. Fastly사의 `1.1.1.1` 서버는 TLS Handshake 를 시작한다.
+6. TLS Handshake가 끝난 뒤, 연결이 구축되면 이제 HTTP 파싱을 진행한다.
+7. 어라, HTTP의 Host 헤더에는 `attacker.com.global.prod.fastly.net` 가 있다. Fastly 서버는 자신의 CDN 네트워크를 뒤져본다. 아하, 공격자가 이미 등록해놨던 `attacker.com.global.prod.fastly.net` CNAME을 찾아낸다. "우리 CDN 네트워크에 존재하는 호스트구나!"
 8. Fastly 사의 `1.1.1.1` 서버는 트래픽을 `www.safe.com` 한테 보내는 것이 아니라, `attacker.com.global.prod.fastly.net` 으로 보낸다. HTTP의 Host 헤더에 그렇게 써져있었으니까.
-9. 공격자는 이미 `attacker.com.global.prod.fastly.net` 에 오는 모든 트래픽을 `www.attacker.com` 이라는 자신의 팀서버에 가도록 Fastly 플랫폼에서 설정을 해뒀다. Fastly 사의 서버는 리다이렉터 처럼, 자신이 받은 트래픽을 공격자 서버에게 보낸다.
+9. 공격자는 이미 `attacker.com.global.prod.fastly.net` 에 오는 모든 트래픽을 `www.attacker.com` 이라는 자신의 팀서버에 가도록 Fastly 플랫폼에서 설정을 해뒀다. Fastly 사의 서버는 리다이렉터처럼, 자신이 받은 트래픽을 공격자 서버에게 보낸다.
 10. 공격자는 에이전트의 트래픽을 받는다.
 
 ## 사전 조건
 
 타겟 호스트가 CDN 관련 CNAME 레코드를 갖고 있다고 해서 무조건 도메인 프론팅이 가능한 것은 아니다.
 
-1. 도메인 프론팅이 가능한 CDN이여야한다 (Fastly, StackPath, 등). 2010년대 중후반대를 거치며 AWS Cloudfront, Azure, Akamai 등, 유명한 CDN 들은 모두 도메인 프론팅을 막는 대응 방안을 도입했다.
-2. 공격자는 타겟과 동일한 CDN에 가입한 뒤, 자신의 공격자 도메인을 CDN에 등록 시켜 CNAME 을 성공적으로 구축해야한다. 대부분의 CDN은 공짜로 50\~100달러 정도의 크레딧을 줘서 크게 불편한 점은 없다.
+1. 도메인 프론팅이 가능한 CDN이여야 한다 (Fastly, StackPath, 등). 2010년대 후반을 거치며 AWS Cloudfront, Azure, Akamai 등, 유명한 CDN 들은 모두 도메인 프론팅을 막는 대응 방안을 도입했다.
+2. 공격자는 타겟과 동일한 CDN에 가입한 뒤, 자신의 공격자 도메인을 CDN에 등록 시켜 CNAME 을 성공적으로 구축해야한다. 대부분의 CDN은 공짜로 50\~100달러 정도의 크레딧을 주기 때문에 큰 문제는 없다.&#x20;
 
-정리하자면, 도메인 프론팅이 가능한 CDN CNAME 레코드를 가지고 있는 타겟 FQDN이 있다면, 공격자도 똑같은 CDN 플랫폼에 가입한 뒤 자신의 공격자 도메인(과 호스트)를 CDN에 등록, 비슷한 CNAME을 받아 도메인 프론팅을 실행할 수 있다.
+정리하자면, 도메인 프론팅이 가능한 CDN CNAME 레코드를 가지고 있는 타겟 FQDN이 있다면 공격자도 똑같은 CDN 플랫폼에 가입한 뒤 자신의 공격자 도메인(과 호스트)를 CDN에 등록, 비슷한 CNAME을 받아 도메인 프론팅을 실행할 수 있다.
 
 ## 실습 - 세팅
 
 이렇게 설명해도 복잡하긴 마련이다. 일단 실습을 진행한다.
 
-시나리오: 공격자는 피싱을 통해 IT 회사의 직원 중 한명의 컴퓨터를 장악했다. 이제, 공격자의 C2 서버로 콜백을 진행해야한다.
+**시나리오: 공격자는 피싱을 통해 IT 회사의 직원 중 한명의 컴퓨터를 장악했다. 이제, 공격자의 C2 서버로 콜백을 진행해야한다.**
 
 1. 먼저, 타겟이 방문할만한 도메인을 찾는다. 파이썬의 공식 홈페이지가 괜찮아 보인다.
 
@@ -61,8 +59,6 @@ www.python.org
 
 ```
 └─# nslookup -type=CNAME www.python.org                             
-Server:         192.168.40.2
-Address:        192.168.40.2#53
 
 Non-authoritative answer:
 www.python.org  canonical name = dualstack.python.map.fastly.net.
@@ -88,7 +84,7 @@ www.python.org  canonical name = dualstack.python.map.fastly.net.
 
 ## 실습 - 간단
 
-먼저 Fastly CDN에 공격자의 CNAME이 잘 설정됐고, 이 CNAME이 리다이렉터 서버로 잘 리다이렉트 하는지 확인한다. 리다이렉터 서버에 간단한 파일을 만든뒤, Fastly CNAME 을 통해 가져와보자.
+먼저 Fastly CDN에 공격자의 CNAME이 잘 설정됐고, CNAME이 리다이렉터 서버로 잘 리다이렉트 하는지 확인한다. 리다이렉터 서버에 간단한 파일을 만든뒤, Fastly CNAME 을 통해 가져와보자.
 
 ```
 └─# curl https://grootbaon.com.global.prod.fastly.net/hi.txt
