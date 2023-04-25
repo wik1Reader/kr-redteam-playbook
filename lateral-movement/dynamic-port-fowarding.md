@@ -97,9 +97,9 @@ sudo apt-get install proxychains
 
 {% embed url="https://github.com/shunf4/proxychains-windows" %}
 
-#### Proxychains 설정및 실행
+#### ProxyChains 설정 및 실행
 
-proxychains4 환경설정 CONFIG 파일을 다음과 같이 설정한다.
+ProxyChains4 환경설정 CONFIG 파일을 다음과 같이 설정한다.
 
 ```sh
 vi /etc/proxychains4.conf
