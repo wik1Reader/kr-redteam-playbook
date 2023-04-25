@@ -20,6 +20,7 @@
   * [중립 공간 (클라우드) 설정](infrastructure/old/neutral-area-cloud-config.md)
   * [네뷸라 (Nebula)](infrastructure/old/nebula.md)
   * [네뷸라 설정](infrastructure/old/nebula-config.md)
+* [도메인 프론팅 (Domain Fronting)](infrastructure/domain-fronting.md)
 
 ## 🔍 공개 출처 정보 수집 (OSINT)
 
