@@ -79,7 +79,7 @@ ProxyChains는 애플리케이션에서 만든 모든 TCP 연결을 모두 SOCKS
 
 또한 이를 통해 공격자는 탐지를 회피할 수 있는 강력한 무기를 갖게 된다. 여러 프록시가 함께 연결되면 포렌식 전문가가 트래픽을 원래 시스템으로 역추적하는 것이 점점 더 어려워집니다.
 
-**ProxyChains 설정법**
+**ProxyChains 설치**
 
 ProxyChains를 설치하는 법은 간단하다.
 
@@ -93,9 +93,9 @@ sudo apt-get install proxychains
 
 {% embed url="https://github.com/shunf4/proxychains-windows" %}
 
-#### Proxychains 설정및 실행행
+#### Proxychains 설정및 실행
 
-proxychains4 환경설정 CONFIG 파일을 다음과 같이설정한다.
+proxychains4 환경설정 CONFIG 파일을 다음과 같이 설정한다.
 
 ```sh
 vi /etc/proxychains4.conf
@@ -103,7 +103,7 @@ vi /etc/proxychains4.conf
 
 ![](<../obsidian\_resources/Pasted image 20230424140932.png>)
 
-원하는 포트에 대한 SSH 리모트 포워딩을 생성한 다음 이 포트를 proxychains.conf에 추가하면 끝이다.
+원하는 포트에 대한 SSH 다이나믹 포워딩을 생성한 다음 이 포트를 proxychains.conf에 추가하면 끝이다.
 
 ![](<../obsidian\_resources/Pasted image 20230424122154.png>)
 
@@ -111,7 +111,7 @@ vi /etc/proxychains4.conf
 
 ![](<../obsidian\_resources/Pasted image 20230424143815.png>)
 
-이제 proxychains롤 통해 Firefox 브라우저를 실행하여 현재 공요 IP를 찾아보면 Remote Server IP로 뜨는것을 확인할 수 있다.
+이제 proxychains롤 통해 Firefox 브라우저를 실행하여 현재 공용 IP를 찾아보면 Remote Server IP로 뜨는것을 확인할 수 있다. 이로써 진짜 IP를 숨길  수 있다.&#x20;
 
 ![](<../obsidian\_resources/Pasted image 20230424141339.png>)
 
@@ -119,7 +119,7 @@ vi /etc/proxychains4.conf
 
 ## 실제 공격 데모
 
-실제 데모를 위해 Digital Ocean에 공격자와 타겟 박스를 각각 만들었다.
+실제 데모를 위해 Digital Ocean에 공격자와 타겟 박스를 각각 만들자.
 
 * 공격자 실제 IP: A:B:C:D
 * SOCKS 프록시 IP: 209.38.230.24
@@ -129,7 +129,7 @@ vi /etc/proxychains4.conf
 
 ![](<../obsidian\_resources/Pasted image 20230424142005.png>)
 
-타겟 IP: 209.38.242.65에는 실제 공격자의 IP가 아닌 프록시 IP 209.38.230.24가 보이는걸 확인할 수 있다.&#x20;
+타겟 (209.38.242.65) 트랙픽 로그에는 실제 공격자의 IP가 아닌 프록시 IP 209.38.230.24가 보이는 것을 확인할 수 있다.&#x20;
 
 <figure><img src="../obsidian_resources/Pasted image 20230424142512.png" alt=""><figcaption></figcaption></figure>
 
@@ -139,7 +139,7 @@ vi /etc/proxychains4.conf
 
 ## 마치며
 
-다이나믹 포트 포워딩을 이용해 Proxy를 구축하는 것은 레드팀뿐 아니라 사이버보안에서 일하는 모든 사람이 숙달해야 하는 중요한 기술입니다. 또한 ProxyChains를 통해 Proxy를 효율적으로 수행하는 데 적극 활용해 수월한 레드팀을 하기를 바란다 ! Happy Hacking!
+다이나믹 포트 포워딩을 이용해 Proxy를 구축하는 것은 레드팀뿐 아니라 사이버보안에서 일하는 모든 사람이 숙달해야 하는 중요한 기술이다. 또한 ProxyChains를 통해 Proxy를 효율적으로 적극 활용해 수월한 레드팀을 하기를 바란다.  Happy Hacking!
 
 ## 레퍼런스
 
