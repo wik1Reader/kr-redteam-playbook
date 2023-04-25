@@ -1,6 +1,6 @@
 # Dynamic Port Forwarding & ProxyChains
 
-저번 [SSH Port Forwarding ](ssh-tunnel.md)시간에서 배웠던 2가지 SSH 연결방식과는 다른 차원의 개념일 수 있으니 어려울 수 있지만 끝까지 따라와 주길 바란다.
+저번 [SSH Port Forwarding ](ssh-tunnel.md)시간에서 배웠던 2가지 SSH 연결 방식과는 다른 차원의 개념일수 있어 어려울 수도 있지만 끝까지 따라와 주길 바란다.
 
 ## 로컬 및 원격 포트 포워딩 vs 다이나믹 포트 포워딩
 
