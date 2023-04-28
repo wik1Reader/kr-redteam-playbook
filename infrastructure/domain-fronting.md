@@ -2,11 +2,11 @@
 
 ## 개념
 
-도메인 프론팅은 CDN (Content Delivery Network) 안의 호스트들을 대상으로 HTTPS 요청의 SNI (Server Name Indiction)에는 허용된 도메인의 이름을 지정한 뒤, HTTP의 요청 헤더 중 Host 에는 원래는 접근 불가능한 도메인을 특정해 네트워크 트래픽 검열 및 감시를 피하는 기법 중 하나다. 2018년도 이후로는 도메인 프론팅 자체를 막아버린 CDN 플랫폼들이 많아서 (CloudFront, Akamai, Azure 등) 더이상 많이 사용되지는 않지만, 그래도 꾸준히 레드팀이나 공격자들이 사용하는 기법이다.
+도메인 프론팅은 같은 CDN (Content Delivery Network)안의 호스트들을 대상으로 HTTPS 요청의 SNI (Server Name Indiction)에는 허용된 도메인의 이름을 지정한 뒤, HTTP의 요청 헤더 중 Host에는 원래 접근 불가능한 도메인을 특정해 네트워크 트래픽 검열 및 감시를 피하는 기법 중 하나다. 2018년도 이후로는 도메인 프론팅 자체를 막아버린 CDN 플랫폼들이 많아서 (CloudFront, Akamai, Azure 등) 더이상 많이 사용되지는 않지만, 그래도 꾸준히 레드팀이나 공격자들이 사용하는 기법이다.
 
 <figure><img src="../.gitbook/assets/domainfronting.drawio.png" alt=""><figcaption></figcaption></figure>
 
-Content Delivery Network (CDN) 은 전세계 고객들이 원하는 데이터와 리소스들을 빠르게 배포하기 위해 다양한 DNS CNAME 레코드들을 사용한다. 예를 들어 네이버사에서 이미지를 호스팅 할 때 `image.naver.com` 은 Fastly 라는 CDN 회사의 다양한 서버들 (`korea.prod.fastly.net`, `us-east-2.prod.fastly.net`) 에 CNAME 레코드를 구축해 한국과 미국의 유저들에게 빠르게 이미지를 배포할 수 있게 된다. 예를 들어, `image.naver.com` 은 `naver.com.korea.prod.fastly.net` 이라던지 `naver.com.us-east-2.prod.fastly.net` 등의 CNAME 레코드를 갖게 된다.
+Content Delivery Network (CDN) 은 전세계 고객들이 원하는 데이터와 리소스들을 빠르게 배포하기 위해 다양한 DNS CNAME 레코드들을 사용한다. 예를 들어 특정 회사에서 이미지 호스팅을 해야할 때, Fastly 라는 CDN 회사의 서버들에 CNAME 레코드를 구축해 한국과 미국의 유저들에게 빠르게 이미지를 배포할 수 있게 된다. 예를 들어, `image.naver.com` 은 `naver.com.korea.prod.fastly.net` 이라던지 `naver.com.us-east-2.prod.fastly.net` 등의 CNAME 레코드를 갖게 된다.
 
 HTTPS SNI와 HTTP Host 헤더의 동일함 (TLS 인증서 등)을 체크하지 않는 CDN 플랫폼의 경우 HTTPS SNI는 정상적인 도메인 (예. `image.naver.com` -> `naver.com.korea.prod.fastly.net`) 을 지정해놓고, HTTP Host 헤더는 공격자의 도메인 CNAME (예. `attacker.com.korea.prod.fastly.net`) 를 지정해놓으면, CDN 회사는 트래픽을 최종적으로 공격자의 호스트 `www.attacker.com` 에 배달을 해준다.
 
