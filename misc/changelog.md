@@ -32,11 +32,11 @@
 
 4/2 - 메인 랜딩 페이지 수정 및 업데이트
 
-4/2 - [smtp-do](../infrastructure/smtp-do/ "mention") 페이지 추가
+4/2 - [smtp-do.md](../infrastructure/smtp-do.md "mention") 페이지 추가
 
 4/3 - [cuckoo.md](../homelab/cuckoo.md "mention")페이지 추가 - [@nanentp](ttps://github.com/nanentp)
 
-4/4 - [mail-terraform.md](../infrastructure/smtp-do/mail-terraform.md "mention") 페이지 추가
+4/4 - [mail-terraform.md](../infrastructure/infra-setup-automation/mail-terraform.md "mention") 페이지 추가
 
 4/6 - [polymorphic-code.md](../defense-evasion/polymorphic-code.md "mention") 페이지 추가 - [@j0eun](https://github.com/j0eun)
 
