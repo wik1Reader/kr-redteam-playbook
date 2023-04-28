@@ -16,8 +16,6 @@
 
 테라폼 설치는 칼리 리눅스를 기반으로 진행한다. 우분투나 데비안에도 적용될 수 있다.
 
-간단 설치
-
 ```
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 wget -O- https://apt.releases.hashicorp.com/gpg | \
@@ -39,8 +37,6 @@ terraform --help
 ## 2. 클라우드 플랫폼 CLI 설치
 
 굳이 안해도 되지만, 이번 실습에서는 AWS를 이용하기 때문에 진행한다.
-
-간단 설치
 
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
