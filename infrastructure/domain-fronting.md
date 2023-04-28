@@ -23,16 +23,14 @@ www.safe.com  canonical name = safe.com.global.prod.fastly.net.
 
 위 다이어그램에서 볼 수 있듯, 공격자는 HTTPS의 SNI에는 `www.safe.com` 을 지정한 뒤, HTTP의 Host 헤더에는 `attacker.com.global.prod.fastly.net` 을 지정한다.
 
-1. 에이전트가 실행되고 프로세스는 `www.safe.com` DNS 요청/응답을 받은 뒤, `www.safe.com` 으로 향한다.
-2. `www.safe.com` 은 `safe.com.global.prod.fastly.net` 이라는 CNAME 레코드를 갖고 있다.
-3. `safe.com.global.prod.fastly.net` 의 A 레코드는 Fastly 사에서 운영중인 서버의 IP 주소 (예를 들어 `1.1.1.1`) 를 갖고 있다.
-4. 타겟은 이제 `1.1.1.1` 로 자신의 HTTPS 트래픽을 보낸다.
-5. Fastly사의 `1.1.1.1` 서버는 TLS Handshake 를 시작한다.
-6. TLS Handshake가 끝난 뒤, 연결이 구축되면 이제 HTTP 파싱을 진행한다.
-7. 어라, HTTP의 Host 헤더에는 `attacker.com.global.prod.fastly.net` 가 있다. Fastly 서버는 자신의 CDN 네트워크를 뒤져본다. 아하, 공격자가 이미 등록해놨던 `attacker.com.global.prod.fastly.net` CNAME을 찾아낸다. "우리 CDN 네트워크에 존재하는 호스트구나!"
-8. Fastly 사의 `1.1.1.1` 서버는 트래픽을 `www.safe.com` 한테 보내는 것이 아니라, `attacker.com.global.prod.fastly.net` 으로 보낸다. HTTP의 Host 헤더에 그렇게 써져있었으니까.
-9. 공격자는 이미 `attacker.com.global.prod.fastly.net` 에 오는 모든 트래픽을 `www.attacker.com` 이라는 자신의 팀서버에 가도록 Fastly 플랫폼에서 설정을 해뒀다. Fastly 사의 서버는 리다이렉터처럼, 자신이 받은 트래픽을 공격자 서버에게 보낸다.
-10. 공격자는 에이전트의 트래픽을 받는다.
+1. 타겟 머신은 `www.safe.com` 과 관련된 CNAME 레코드와 CNAME의 DNS 호스트 이름과 관련된 A 레코드를 받는다. 예를 들자면 `www.safe.com` == `safe.com.global.prod.fastlyi.net` 이라는 CNAME, 그리고 A 레코드는 Fastly 사의 서버 중 한대인 `1.1.1.1` IP주소를 받는다.
+2. 타겟은 `1.1.1.1` 로 자신의 HTTPS 트래픽을 보낸다.
+3. Fastly사의 `1.1.1.1` 서버는 TLS Handshake 를 시작한다.
+4. TLS Handshake가 끝난 뒤, 연결이 구축되면 HTTP 파싱을 진행한다.
+5. 어라, HTTP의 Host 헤더에는 `attacker.com.global.prod.fastly.net` 가 있다. Fastly 서버는 자신의 CDN 네트워크를 뒤져본다. 아하, 공격자가 이미 등록해놨던 `attacker.com.global.prod.fastly.net` CNAME을 찾아낸다. "우리 CDN 네트워크에 존재하는 호스트구나!"
+6. Fastly 사의 `1.1.1.1` 서버는 트래픽을 `www.safe.com` 한테 보내는 것이 아니라, `attacker.com.global.prod.fastly.net` 으로 보낸다. HTTP의 Host 헤더에 그렇게 써져있었으니까.
+7. 공격자는 이미 `attacker.com.global.prod.fastly.net` 에 오는 모든 트래픽을 `www.attacker.com` 이라는 자신의 팀서버에 가도록 Fastly 플랫폼에서 설정을 해뒀다. Fastly 사의 서버는 리다이렉터처럼, 자신이 받은 트래픽을 공격자 서버에게 보낸다.
+8. 공격자는 에이전트의 트래픽을 받는다.
 
 ## 사전 조건
 
