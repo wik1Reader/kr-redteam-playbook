@@ -65,11 +65,11 @@ Postfix 메일 서버와 ZOHO와 같은 서드파티 메일 서버의 차이점�
 
 DNSTWIST를 통해 그루트 도메인 grootboan.com과 비슷하지만 다른? 도메인을 찾는다. 이번 실습에서는 boan의 a와 o를 바꿔 grootbaon.com을 구매했다.
 
-![](<../.gitbook/assets/Pasted image 20230414153642 (1) (1) (1) (2) (1) (2).png>)
+![](<../.gitbook/assets/Pasted image 20230414153642 (1) (1) (1) (1).png>)
 
 Namecheap에 들어가 grootbaon.com을 확인하여 구매한다.
 
-![](<../.gitbook/assets/Pasted image 20230414153807 (1).png>) ![](<../.gitbook/assets/Pasted image 20230414154219.png>)
+![](<../.gitbook/assets/Pasted image 20230414153807.png>) ![](<../.gitbook/assets/Pasted image 20230414154219.png>)
 
 ### GoPhish 호스팅 AWS EC2 서버 구축
 
@@ -90,15 +90,15 @@ AWS EC2 웹 서비스를 아래와 같은 스펙으로 설정하여 생성한다
 
 다음과 같이 EC2를 생성해준다.
 
-![](<../.gitbook/assets/Pasted image 20230416194114 (1) (1) (1) (2) (1) (1).png>)
+![](<../.gitbook/assets/Pasted image 20230416194114 (1) (1) (1) (1).png>)
 
 안전하고 Private한 연결을 위해 SSH 키 페어를 설정해준다.
 
-<figure><img src="../.gitbook/assets/Pasted image 20230416195853 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pasted image 20230416195853 (1) (1) (2) (1) (1) (1) (5).png" alt=""><figcaption></figcaption></figure>
 
 물론 나중에 세팅이 완료되면 디테일한 방화벽 설정이 필요하지만 스무스한 진행을 위해 방화벽은 따로 설정하지 않기로 한다.
 
-<figure><img src="../.gitbook/assets/Pasted image 20230416194249 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pasted image 20230416194249.png" alt=""><figcaption></figcaption></figure>
 
 스토리지 또한 15-20 기가 정도로 설정하여 혹시모를 스토리지 부족에 대비해 넉넉히 설정해도 된다. 모든 설정이 마무리되면 "인스턴트 시작"을 눌러 GoPhish 서버 EC2를 생성한다.
 
@@ -108,7 +108,7 @@ AWS EC2 웹 서비스를 아래와 같은 스펙으로 설정하여 생성한다
 
 위 EC2 서버 설정에서 만들었던 SSH Private Key를 통해 고피시 서버에 연결한다.
 
-![](<../.gitbook/assets/Pasted image 20230416195949 (1) (1) (1) (2) (1) (1).png>)
+![](<../.gitbook/assets/Pasted image 20230416195949 (1) (1) (1) (1).png>)
 
 이제 고피쉬를 설정한다.
 
@@ -127,15 +127,13 @@ find . -type f -exec sed -i 's/X-Gophish-Contact/X-Contact/g; s/X-Gophish-Signat
 go build
 ```
 
-
-
 모든 과정이 에러없이 완료 되었다면 모든 GoPhish 설정은 다 끝났다.
 
 ### ZOHO 메일 서버 설정
 
 메일 서버를 설정하기 앞서 Namecheap에 들어가 도메인 Privacy가 활성화 되어있는지 확인해 준다.
 
-![](<../.gitbook/assets/Pasted image 20230417093609 (1) (1) (1).png>)
+![](<../.gitbook/assets/Pasted image 20230417093609 (1) (1) (2) (1) (1) (1) (3).png>)
 
 아래 sign up 링크에서 ZOHO 계정 만든다.
 
@@ -143,7 +141,7 @@ go build
 
 참고로 아시안쪽에서 VPN을 굴리면 ZOHO 데이터 베이스가 호주 또는 일본으로 설정되기에 AU 코드가 뜬다. 구매한 도메인으로 이메일 도메인을 설정하기에 다음과 같이 진행한다.
 
-<figure><img src="../.gitbook/assets/Pasted image 20230417093954 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pasted image 20230417093954.png" alt=""><figcaption></figcaption></figure>
 
 ![](<../.gitbook/assets/Pasted image 20230417094142.png>)
 
@@ -258,7 +256,7 @@ Landing Pages에서는 피싱 피해자가 피싱 메일이 유도하는 피싱 
 
 아래와 같이 돋보기 아이콘을 눌러주면 템플릿을 미리보기 할수 있다.
 
-<figure><img src="../.gitbook/assets/Pasted image 20230417113719.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pasted image 20230417113656.png" alt=""><figcaption></figcaption></figure>
 
 아래와 같은 피싱 템플릿이 사용되는걸 미리 확인할 수 있다.
 

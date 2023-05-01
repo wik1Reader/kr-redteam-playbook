@@ -184,7 +184,7 @@
 
 * [개념](real-attack-ttp-and-mitigations/concepts.md)
 
-## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
+## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
 
 * [시스몬 (sysmon) 설치](homelab/installing-sysmon.md)
 * [SIEM과 EDR 솔루션 설치](homelab/edr.md)

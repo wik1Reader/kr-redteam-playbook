@@ -32,7 +32,7 @@
 
 또한 레드팀 SMTP GoPhish 구축법에서도 배웠듯 Ubuntu 서버는 그래픽을 제공하지 않으므로 로컬 포워딩을 해주면 로컬 시스템에서 리모트 서버에서 실행되는 GoPhish를 로컬에서 접근할수있다.
 
-![](<../obsidian\_resources/Pasted image 20230423103534.png>)
+![](<../obsidian\_resources/Pasted image 20230423103534 (1).png>)
 
 #### 공격자 관점 시나리오
 
