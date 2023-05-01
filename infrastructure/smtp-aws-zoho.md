@@ -8,7 +8,7 @@ description: >-
 
 ## 개요
 
-test 저번 시간에서 Postfix와 같은 오픈 소스 메일 서비스를 사용해 Digtal Ocean 메일 서버를 직접 설정하는 법을 배웠다.
+저번 시간에서 Postfix와 같은 오픈 소스 메일 서비스를 사용해 Digtal Ocean 메일 서버를 직접 설정하는 법을 배웠다.
 
 {% embed url="https://www.xn--hy1b43d247a.com/infrastructure/smtp" %}
 
