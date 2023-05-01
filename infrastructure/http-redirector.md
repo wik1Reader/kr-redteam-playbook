@@ -8,7 +8,7 @@
 
 이 페이지에서는 다음과 같은 인프라를 구축한다.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 해당 인프라는 비컨이 팀서버에 직접적으로 콜백하지 않고, 클라우드에 있는 리다이렉터를 거쳐 레드팀존의 팀서버로 콜백이 되게끔 설정한 아주 간단한 인프라다. 비컨과 레드팀 팀서버의 네트워크 트래픽은 아래와 같이 일어나게 된다.
 
