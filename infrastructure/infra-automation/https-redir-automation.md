@@ -4,7 +4,7 @@
 
 이전 HTTPS 리다이렉터 페이지에서는 수동으로 HTTPS 리다이렉터를 설정했다. 인프라 구축을 자동화 하기 위해서 테라폼을 이용한 Infrastructure as Code (IaC) 를 진행한다.
 
-https://github.com/ChoiSG/RTPSourceCodes/tree/main/iac/https-terraform
+{% embed url="https://github.com/ChoiSG/RTPSourceCodes/tree/main/iac/https-terraform" %}
 
 위 테라폼 스크립트를 실행하면 AWS에 다음과 같은 인프라를 구축한다.
 
