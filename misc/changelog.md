@@ -58,4 +58,8 @@
 
 4/25 - [domain-fronting.md](../infrastructure/domain-fronting.md "mention")페이지 추가&#x20;
 
-4/27 - [terraform.md](../infrastructure/infra-automation/terraform.md "mention")페이지 추가&#x20;
+4/27 - [terraform.md](../infrastructure/infra-automation/terraform.md "mention")페이지 추가
+
+4/30 - [hta.md](../initial-access/phish-attachments/hta.md "mention") 페이지 추가 - [@nanentp](ttps://github.com/nanentp)
+
+5/1 - [https-redir-automation.md](../infrastructure/infra-automation/https-redir-automation.md "mention")페이지추가&#x20;
