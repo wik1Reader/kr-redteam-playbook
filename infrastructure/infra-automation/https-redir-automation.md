@@ -87,9 +87,9 @@ ssh -i <ssh-priv-key> ubuntu@<redirector> -o StrictHostKeyChecking=no -o UserKno
 사용할 C2 프레임워크에서 테라폼이 생성한 TLS/SSL 인증서 파일을 지정해준다. 다음의 예시는 Havoc Framework 의 `havoc.yaotl` 가변적 C2 프로필 파일을 변형한 것이다.
 
 * 맨 아래의 `Cert` 블럭을 보면 테라폼이 생성한 `fullchain.pem` 과 `privkey.pem` 파일을 설정했다.
-* `Hosts` 는 리다이렉터 서버의 DNS FQDN (`blog.grootbaon.com`)를 사용했다.
-* `HostBind` 는 SSH Remote Port Forwarding을 하기 때문에 꼭 `0.0.0.0` 으로 지정한다.
-* `UserAgent` 는 테라폼의 `variables.tf` 에 있는 화이트리스트 된 유저 에이전트를 사용했다.
+* `Hosts`는 리다이렉터 서버의 DNS FQDN (`blog.grootbaon.com`)를 사용했다.
+* `HostBind`는 SSH Remote Port Forwarding을 하기 때문에 꼭 `0.0.0.0` 으로 지정한다.
+* `UserAgent`는 테라폼의 `variables.tf` 에 있는 화이트리스트 된 유저 에이전트를 사용한다.
 
 <details>
 
@@ -170,7 +170,7 @@ Listeners {
 
 
 
-팀서버를 생성한 뒤 Attack > Payload로 가 에이전트를 만들고, 실행하면 다음과 같은 콜백이 이뤄진다. DNS 요청으로 리다이렉터 서버의 IP 주소를 알아낸 뒤, 그 서버로 HTTPS 트래픽을 보낸다.&#x20;
+리스너를 생성한 뒤 Attack > Payload로 가서 에이전트를 만든 뒤 실행하면 다음과 같은 콜백이 이뤄진다. DNS 요청으로 리다이렉터 서버의 IP 주소를 알아낸 뒤, 해당 IP로 HTTPS 트래픽을 보내고 있다.&#x20;
 
 <figure><img src="../../.gitbook/assets/https-redirector-terraform-3.PNG" alt=""><figcaption></figcaption></figure>
 
