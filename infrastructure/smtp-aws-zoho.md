@@ -65,7 +65,7 @@ Postfix 메일 서버와 ZOHO와 같은 서드파티 메일 서버의 차이점�
 
 DNSTWIST를 통해 그루트 도메인 grootboan.com과 비슷하지만 다른? 도메인을 찾는다. 이번 실습에서는 boan의 a와 o를 바꿔 grootbaon.com을 구매했다.
 
-![](<../.gitbook/assets/Pasted image 20230414153642 (1) (1) (1) (1) (1) (5).png>)
+![](<../.gitbook/assets/Pasted image 20230414153642 (1) (1) (1) (1) (1) (2).png>)
 
 Namecheap에 들어가 grootbaon.com을 확인하여 구매한다.
 
@@ -94,7 +94,7 @@ AWS EC2 웹 서비스를 아래와 같은 스펙으로 설정하여 생성한다
 
 안전하고 Private한 연결을 위해 SSH 키 페어를 설정해준다.
 
-<figure><img src="../.gitbook/assets/Pasted image 20230416195853 (1) (1) (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pasted image 20230416195853 (1) (1) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 물론 나중에 세팅이 완료되면 디테일한 방화벽 설정이 필요하지만 스무스한 진행을 위해 방화벽은 따로 설정하지 않기로 한다.
 
