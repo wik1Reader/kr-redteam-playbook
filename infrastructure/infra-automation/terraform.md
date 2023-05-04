@@ -71,6 +71,8 @@ AWS Access Key ID [None]: <REDACTED>
 AWS Secret Access Key [None]: <REDACTED>
 Default region name [None]: us-east-1
 Default output format [None]: text
+
+└─# aws configure list
 ```
 
 ## 4. 테라폼 실행
@@ -114,11 +116,9 @@ resource "aws_instance" "example" {
 **테라폼 실행**
 
 ```
-terraform fmt 
-terraform plan 
-terraform apply 
-
-[ . . . ] 
+└─# terraform fmt 
+└─# terraform plan 
+└─# terraform apply 
 
 Do you want to perform these actions?
   Terraform will perform the actions described above.
@@ -126,10 +126,8 @@ Do you want to perform these actions?
 
   Enter a value: yes
 
-aws_instance.example: Creating...
-aws_instance.example: Still creating... [10s elapsed]
-aws_instance.example: Still creating... [20s elapsed]
-aws_instance.example: Still creating... [30s elapsed]
+[ . . . ]
+
 aws_instance.example: Creation complete after 33s [id=i-000a951587d55abe1]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
@@ -144,22 +142,9 @@ SSH키를 지정해주지도 않았고, 보안 그룹 (방화벽) 설정을 해�
 **구축한 인프라 폐기**
 
 ```
-terraform destroy 
+└─# terraform destroy 
 
 [ . . . ] 
-
-Plan: 0 to add, 0 to change, 1 to destroy.
-
-Do you really want to destroy all resources?
-  Terraform will destroy all your managed infrastructure, as shown above.
-  There is no undo. Only 'yes' will be accepted to confirm.
-
-  Enter a value: yes
-
-aws_instance.example: Destroying... [id=i-000a951587d55abe1]
-aws_instance.example: Still destroying... [id=i-000a951587d55abe1, 10s elapsed]
-aws_instance.example: Still destroying... [id=i-000a951587d55abe1, 20s elapsed]
-aws_instance.example: Still destroying... [id=i-000a951587d55abe1, 30s elapsed]
 aws_instance.example: Destruction complete after 30s
 
 Destroy complete! Resources: 1 destroyed.

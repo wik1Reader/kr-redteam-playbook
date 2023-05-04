@@ -338,14 +338,17 @@ References:
 - https://www.prajwal.org/sccm-network-access-account/
 
 The references are pretty straight forward. 
-1. Domain container, user, group configuration 
-2. Install SQL server on the server that SCCM will be also installed 
-3. If SCCM complains about not finding the correct MSSQL instance, 
+- Domain container, user, group configuration 
+- Install SQL server on the server that SCCM will be also installed. (SQL2017, SCCM 2203 worked) 
+- If SCCM complains about not finding the correct MSSQL instance, 
 do NOT do "install primary standalone" option. Just go full manual and specify the SQL server 
-FQDN and the instance name. 
-4. Ensure SQL service is running through SQL Server Configuration manager. 
-5. Ensure SQL service has dynamic port <none> and tcp port 1433 via SQL server configuration manager
-6. gl! 
+FQDN and the instance name.
+- ENSURE to install the "primary site". DO NOT install the configuration site.  
+- Ensure current user has a SQL administrator priv - during SQL installation  
+- Ensure SQL service is running through SQL Server Configuration manager. 
+- Ensure SQL service has dynamic port <none> and tcp port 1433 via SQL server configuration manager
+- If the default MSSQLSERVER instance got messed up during SQL installation, just install another SQL instance like SCCMSQL and use that during SCCM splash installation.
+- gl! 
 
 ```
 

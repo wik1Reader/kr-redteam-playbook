@@ -17,6 +17,7 @@
 * [인프라 구축 자동화](infrastructure/infra-automation/README.md)
   * [테라폼 (Terraform)](infrastructure/infra-automation/terraform.md)
   * [SMTP 테라폼 자동화](infrastructure/infra-automation/mail-terraform.md)
+  * [HTTPS 리다이렉터 자동화 (AWS)](infrastructure/infra-automation/https-redir-automation.md)
 * [old-네뷸라를 이용한 인프라 구축](infrastructure/old/README.md)
   * [도메인과 리다이렉터 설정](infrastructure/old/domain-redirector-config.md)
   * [중립 공간 (클라우드) 설정](infrastructure/old/neutral-area-cloud-config.md)
@@ -184,7 +185,7 @@
 
 * [개념](real-attack-ttp-and-mitigations/concepts.md)
 
-## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
+## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
 
 * [시스몬 (sysmon) 설치](homelab/installing-sysmon.md)
 * [SIEM과 EDR 솔루션 설치](homelab/edr.md)

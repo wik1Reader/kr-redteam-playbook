@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "initial-access/phish-attachments/XLM-Excel-40.md",
+                "file": "initial-access/phish-attachments/hta.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "initial-access/phish-attachments/XLM-Excel-40.md",
+                "file": "initial-access/phish-attachments/hta.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "initial-access/phish-attachments/XLM-Excel-40.md",
+                "file": "initial-access/phish-attachments/hta.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "initial-access/phish-attachments/XLM-Excel-40.md"
+                "file": "initial-access/phish-attachments/hta.md"
               }
             }
           }
@@ -156,9 +156,11 @@
   },
   "active": "8ee5ce9c5c43ec9b",
   "lastOpenFiles": [
+    "initial-access/phish-attachments/XLM-Excel-40.md",
+    "obsidian_resources/Pasted image 20230423103534 (1) (2).png",
+    "infrastructure/infra-automation/https-redir-automation.md",
     "initial-access/phish-attachments/hta.md",
     "initial-access/phish-attachments/follina.md",
-    "initial-access/phish-attachments/XLM-Excel-40.md",
     "obsidian_resources/Pasted image 20230504185904.png",
     "obsidian_resources/Pasted image 20230504185852.png",
     "initial-access/phish-attachments/lnk.md",
@@ -179,7 +181,6 @@
     "initial-access/html-smuggling.md",
     "lateral-movement/ssh-tunnel.md",
     "SUMMARY.md",
-    "obsidian_resources/Pasted image 20230423103534 (2).png",
     "infrastructure/infra-automation/terraform.md",
     "infrastructure/infra-automation/README.md",
     "infrastructure/infra-automation/mail-terraform.md",
@@ -192,7 +193,6 @@
     "what-even-is-redteam.md",
     "Untitled.canvas",
     "2023-04-23.md",
-    "lateral-movement/wmi.md",
     "obsidian_resources",
     "New folder"
   ]
