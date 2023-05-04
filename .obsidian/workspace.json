@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md",
+                "file": "initial-access/phish-attachments/XLM-Excel-40.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "8f7e75906451dfa8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md",
+                "file": "initial-access/phish-attachments/XLM-Excel-40.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md",
+                "file": "initial-access/phish-attachments/XLM-Excel-40.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md"
+                "file": "initial-access/phish-attachments/XLM-Excel-40.md"
               }
             }
           }
@@ -148,39 +156,43 @@
   },
   "active": "8ee5ce9c5c43ec9b",
   "lastOpenFiles": [
-    "lateral-movement/ssh-tunnel.md",
     "initial-access/phish-attachments/hta.md",
+    "initial-access/phish-attachments/follina.md",
+    "initial-access/phish-attachments/XLM-Excel-40.md",
+    "obsidian_resources/Pasted image 20230504185904.png",
+    "obsidian_resources/Pasted image 20230504185852.png",
+    "initial-access/phish-attachments/lnk.md",
+    "initial-access/phish-attachments/vba-stomping.md",
+    "initial-access/phish-attachments/vba-purging.md",
+    "initial-access/phish-attachments/iso.md",
+    "initial-access/phish-attachments/remote-template-injection.md",
+    "initial-access/phish-attachments/vba-macros.md",
+    "initial-access/phish-attachments/README.md",
+    "initial-access/phish-attachments/dotnettojs.md",
+    "obsidian_resources/화면 캡처 2023-05-02 200259.png",
+    "obsidian_resources/Pasted image 20230502200118.png",
+    "obsidian_resources/Pasted image 20230502195849.png",
+    "obsidian_resources/Pasted image 20230502195827.png",
+    "obsidian_resources/Pasted image 20230502195135.png",
+    "obsidian_resources/Pasted image 20230502193523.png",
+    "obsidian_resources/Pasted image 20230502193306.png",
+    "initial-access/html-smuggling.md",
+    "lateral-movement/ssh-tunnel.md",
     "SUMMARY.md",
     "obsidian_resources/Pasted image 20230423103534 (2).png",
-    "obsidian_resources/Pasted image 20230423103534 (1) (1).png",
     "infrastructure/infra-automation/terraform.md",
     "infrastructure/infra-automation/README.md",
     "infrastructure/infra-automation/mail-terraform.md",
     "infrastructure/infra-automation",
     "infrastructure/domain-fronting.md",
-    "obsidian_resources/Pasted image 20230501210226.png",
     "lateral-movement/rdp.md",
-    "obsidian_resources/Pasted image 20230501202117.png",
-    "obsidian_resources/Pasted image 20230501175738.png",
-    "obsidian_resources/Pasted image 20230501175551.png",
-    "obsidian_resources/Pasted image 20230501172222.png",
-    "obsidian_resources/Pasted image 20230501171712.png",
-    "obsidian_resources/Pasted image 20230501170229.png",
-    "initial-access/phish-attachments/follina.md",
-    "initial-access/phish-attachments/dotnettojs.md",
     "infrastructure/smtp-aws-zoho.md",
     "lateral-movement/dynamic-port-fowarding.md",
     "README.md",
-    "obsidian_resources/Pasted image 20230424143815.png",
     "what-even-is-redteam.md",
     "Untitled.canvas",
     "2023-04-23.md",
     "lateral-movement/wmi.md",
-    "infrastructure/http-redirector.md",
-    "infrastructure/groot.md",
-    "homelab/cuckoo.md",
-    "homelab/edr.md",
-    "personal-research/DNS Study.md",
     "obsidian_resources",
     "New folder"
   ]
