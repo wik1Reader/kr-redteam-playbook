@@ -98,7 +98,7 @@ setTimeout(varBlobShim+'(varBlob, "calc.xll")');
 python2.7 embedInHTML.py -f ./payloads_examples/calc.xll -o test.html -w -k testkey
 ```
 
-![](<../.gitbook/assets/htmlsmuggling-demo2 (1).gif>)
+![](../.gitbook/assets/htmlsmuggling-demo2.gif)
 
 ### 레퍼런스
 

@@ -13,7 +13,7 @@
 * HellsGate에서 다이나믹하게 시스템 콜 번호를 가져올 때 가장 중요했던 점 중 하나는 바로 `mov r10, rcx // mov eax,<syscall#>` 형식의 시스템 콜 번호 바이트 패턴 - `4c 8b d1 b8 <syscall> <syscall> 00 00` 을 찾는 것이였다.
 * 바이트 패턴은 깔끔한 ntdll.dll 의 경우에는 쉽게 찾을 수 있다. 하지만 유저랜드 후킹이 들어간 메모리상의 NTAPI 함수 메모리에서는 바이트 패턴이 완전히 바뀌어 버린 경우가 많이있다. 이 경우, 바이트 패턴 자체를 아예 찾지 못하기 때문에 HellsGate 기법을 사용할 수 없게 된다.
 
-<figure><img src="../../.gitbook/assets/hooked-syscall (1).png" alt=""><figcaption><p>Sektor7 사 블로그 포스트 중 일부. 유저랜드 후킹 때문에 ZwMapViewOfSection에서 바이트 패턴을 찾아볼 수 없다.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/hooked-syscall.png" alt=""><figcaption><p>Sektor7 사 블로그 포스트 중 일부. 유저랜드 후킹 때문에 ZwMapViewOfSection에서 바이트 패턴을 찾아볼 수 없다.</p></figcaption></figure>
 
 ### 해결
 

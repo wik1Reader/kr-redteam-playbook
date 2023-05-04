@@ -28,11 +28,11 @@
 
 고객이 하나 일때는 문제가 없겠지만 100개의 고객의 서비스를 관리하는 서비스 제공자 입장에선 리모트로 운영되고 있는 고객 서비스를 메뉴얼하게 접근해 관리하는 방식은 매우 비효율적이다. 대신에 아래와 같이 고객의 시스템을 로컬에서 관리하기 위해 로컬 포워딩을 해준다면 훨씬 더 편한 삶을 살수있다.
 
-![](<../obsidian\_resources/Pasted image 20230423111447.png>)
+![](<../obsidian\_resources/Pasted image 20230423111452.png>)
 
 또한 레드팀 SMTP GoPhish 구축법에서도 배웠듯 Ubuntu 서버는 그래픽을 제공하지 않으므로 로컬 포워딩을 해주면 로컬 시스템에서 리모트 서버에서 실행되는 GoPhish를 로컬에서 접근할수있다.
 
-![](<../obsidian\_resources/Pasted image 20230423103534 (1).png>)
+![](<../obsidian\_resources/Pasted image 20230423103534 (1) (1).png>)
 
 #### 공격자 관점 시나리오
 
@@ -54,7 +54,7 @@
 ssh -L 2222:10.0.0.5:3333 <타겟 username>@10.0.0.5
 ```
 
-![](<../obsidian\_resources/Pasted image 20230423115839.png>)
+![](<../obsidian\_resources/Pasted image 20230423121253.png>)
 
 이로써, 10.0.0.1은 10.0.0.5 3333 포트에서 실행되는 서비스를 로컬에서 2222 포트로 접근할 수 있다.
 
@@ -90,7 +90,7 @@ Choi는 내부 192.168.137.136 포트 80에서 웹 서버가 실행되어 있는
 
 데모를 위해 Digital Ocean 또는 AWS로 간단히 Gateway 호스트를 준비한다. 본 데모에서는 기본 Ubuntu 서버를 만들었다. 따로 설치할 라이브러리는 없고 퍼블릭 IP만 기억해 준다.
 
-![](<../obsidian\_resources/Pasted image 20230422195639.png>)
+![](<../obsidian\_resources/Pasted image 20230422195639 1.png>)
 
 공격자는 로컬 서버 192.168.137.136 에서 다음과 같은 Admin Panel이 실행되는것을 확인한다.
 

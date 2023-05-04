@@ -38,7 +38,7 @@ ESS가 비활성화된 Net-NTLMv1 은 `:` 를 기준으로 같은 문자열이 �
 >
 > 실무였다면 crack.sh가 아니라 hashcat을 이용해 Net-NTLMv1 -> NTLM 다운 그레이드를 실행한다
 
-![](../.gitbook/assets/ntlmv1-crack-sh.png)
+![](<../.gitbook/assets/ntlmv1-crack-sh (1).png>)
 
 이런식으로 첨부하면 이메일로 다운그레이드 된 NTLM 해시가 온다. 이제 이 해시를 이용해 PTH를 해 사용자 인증을 한다.
 
