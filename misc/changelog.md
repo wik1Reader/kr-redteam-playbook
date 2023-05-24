@@ -63,3 +63,6 @@
 4/30 - [hta.md](../initial-access/phish-attachments/hta.md "mention") 페이지 추가 - [@nanentp](ttps://github.com/nanentp)
 
 5/1 - [https-redir-automation.md](../infrastructure/infra-automation/https-redir-automation.md "mention")페이지추가&#x20;
+
+5/16 - [external-sid-golden-ticket.md](../post-exploitation/external-sid-golden-ticket.md "mention")페이지 추가&#x20;
+

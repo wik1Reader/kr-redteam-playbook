@@ -129,6 +129,10 @@
 * [MSIExec](defense-evasion/msiexec.md)
 * [다형성 코드](defense-evasion/polymorphic-code.md)
 
+## 👿 후속 공격 (Post Exploitation)
+
+* [External SID Golden Ticket](post-exploitation/external-sid-golden-ticket.md)
+
 ## 🎭 계정 정보 탈취 (Credential Access)
 
 * [커버로스](credential-access/kerberos/README.md)
