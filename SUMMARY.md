@@ -198,7 +198,7 @@
 
 
 ## 기본 개념 <a href="#basic-concepts" id="basic-concepts"></a>
-[해커가 알아야하는 DNS 기본 개념 1편](basic-concepts/dns-concepts.md)
+* [해커가 알아야하는 DNS 기본 개념 1편](basic-concepts/dns-concepts.md)
 
 ## 🎅 MISC
 
