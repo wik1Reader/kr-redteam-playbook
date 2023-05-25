@@ -198,7 +198,8 @@
 
 ## 기본 개념 <a href="#basic-concepts" id="basic-concepts"></a>
 
-* [DNS 개념편 #1](basic-concepts/dns-concepts.md)
+* [DNS](basic-concepts/dns/README.md)
+  * [DNS 개념편 #1](basic-concepts/dns/dns-concepts.md)
 
 ## 🎅 MISC
 
