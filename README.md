@@ -1,6 +1,6 @@
 # 레드팀 플레이북
 
-![](<.gitbook/assets/rt-playbook-logo (1).svg>)
+![](.gitbook/assets/rt-playbook-logo.svg)
 
 ### 들어가며
 

@@ -139,7 +139,7 @@ vi /etc/proxychains4.conf
 
 #### 최종 우회 시나리오
 
-<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 ## 마치며
 

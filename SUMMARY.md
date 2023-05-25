@@ -37,15 +37,15 @@
 * [개념](initial-access/concepts.md)
 * [피싱 첨부파일](initial-access/phish-attachments/README.md)
   * [오피스 VBA 매크로](initial-access/phish-attachments/vba-macros.md)
+  * [XLM Excel 4.0 매크로](initial-access/phish-attachments/XLM-Excel-40.md)
   * [원격 템플렛 인젝션](initial-access/phish-attachments/remote-template-injection.md)
   * [VBA Stomping](initial-access/phish-attachments/vba-stomping.md)
-  * [VBA Purging - TODO](initial-access/phish-attachments/vba-purging.md)
+  * [HTA](initial-access/phish-attachments/hta.md)
   * [LNK](initial-access/phish-attachments/lnk.md)
   * [ISO](initial-access/phish-attachments/iso.md)
-  * [DotNetToJS](initial-access/phish-attachments/dotnettojs.md)
-  * [HTA](initial-access/phish-attachments/hta.md)
-  * [Follina](initial-access/phish-attachments/follina.md)
-  * [XLM Excel 4.0 매크로](initial-access/phish-attachments/XLM-Excel-40.md)
+  * [VBA Purging - TODO](initial-access/phish-attachments/vba-purging.md)
+  * [DotNetToJS - TODO](initial-access/phish-attachments/dotnettojs.md)
+  * [Follina - TODO](initial-access/phish-attachments/follina.md)
 * [HTML 스머글링 (Smuggling)](initial-access/html-smuggling.md)
 * [피싱 - AitM (Adversary in the Middle)](initial-access/aitm.md)
 * [Living Off Trusted Sites (LOTS)](initial-access/living-off-trusted-sites.md)
@@ -129,6 +129,10 @@
 * [MSIExec](defense-evasion/msiexec.md)
 * [다형성 코드](defense-evasion/polymorphic-code.md)
 
+## 👿 후속 공격 (Post Exploitation)
+
+* [External SID Golden Ticket](post-exploitation/external-sid-golden-ticket.md)
+
 ## 🎭 계정 정보 탈취 (Credential Access)
 
 * [커버로스](credential-access/kerberos/README.md)
@@ -185,7 +189,7 @@
 
 * [개념](real-attack-ttp-and-mitigations/concepts.md)
 
-## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
+## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
 
 * [시스몬 (sysmon) 설치](homelab/installing-sysmon.md)
 * [SIEM과 EDR 솔루션 설치](homelab/edr.md)

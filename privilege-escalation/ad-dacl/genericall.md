@@ -14,7 +14,7 @@
 
 ## 악용 - 유저
 
-<figure><img src="../../.gitbook/assets/bh-generic-all-user-comp.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bh-generic-all-user-comp (1).png" alt=""><figcaption></figcaption></figure>
 
 1. Shadow Credentials: `msDS-KeyCredentialsLink` 에 공격자 공개 키를 추가한 뒤, PKINIT을 이용해 사용자 인증을 한다
 2. Targeted Kerberoast: 대상 유저 계정에 SPN을 추가한 뒤 해당 유저만 Kerberoasting 공격을 실행한다
@@ -56,7 +56,7 @@ net rpc password "TargetUser" "newP@ssword2022" -U "DOMAIN"/"ControlledUser"%"Pa
 
 ## 악용 - 컴퓨터
 
-<figure><img src="../../.gitbook/assets/bh-generic-all-user-comp (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bh-generic-all-user-comp.png" alt=""><figcaption></figcaption></figure>
 
 다음과 같은 공격으로 머신 계정을 장악한다.
 

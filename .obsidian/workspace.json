@@ -13,13 +13,50 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "basic-concepts/dns-concepts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ccfdce09eace9d0b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "misc/changelog.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "b275e339eea4bd13",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "basic-concepts/dns-concepts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7fb298df10a8f0a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -93,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "misc/changelog.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "misc/changelog.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/changelog.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           }
@@ -154,17 +191,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f80e53bc1f740dd1",
+  "active": "7fb298df10a8f0a3",
   "lastOpenFiles": [
+    "basic-concepts/dns-concepts.md",
+    "conflict-files-obsidian-git.md",
+    "misc/changelog.md",
+    "README.md",
+    "SUMMARY.md",
+    "post-exploitation/external-sid-golden-ticket.md",
+    "post-exploitation",
+    "obsidian_resources/Pasted image 20230423103534 (1) (1) (1).png",
     "misc/contributions.md",
     "misc/csharp-snippets.md",
     "misc/powershell-oneliners.md",
     "misc/레퍼런스-크레딧.md",
-    "SUMMARY.md",
-    "basic-concepts/dns-concepts.md",
     "credential-access/authentication-coercion/ms-efsrpc.md",
     "credential-access/authentication-coercion/ms-dfsnm.md",
-    "README.md",
     "신냉전과 제국주의 부활과 사이버 범죄의 연결고리.md",
     "basic-concepts",
     "lateral-movement/pivoting.md",
@@ -180,7 +222,6 @@
     "obsidian_resources/apple interview.png",
     "obsidian_resources/Pasted image 20230523140907.png",
     "obsidian_resources/Pasted image 20230523140858.png",
-    "obsidian_resources/Pasted image 20230519133010.png",
     "initial-access/phish-attachments/hta.md",
     "initial-access/phish-attachments/XLM-Excel-40.md",
     "infrastructure/infra-automation/https-redir-automation.md",
@@ -190,9 +231,6 @@
     "initial-access/phish-attachments/vba-purging.md",
     "initial-access/phish-attachments/iso.md",
     "initial-access/phish-attachments/remote-template-injection.md",
-    "initial-access/phish-attachments/vba-macros.md",
-    "initial-access/phish-attachments/README.md",
-    "initial-access/phish-attachments/dotnettojs.md",
     "infrastructure/infra-automation",
     "Untitled.canvas",
     "obsidian_resources",
