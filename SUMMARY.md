@@ -199,7 +199,7 @@
 ## 기본 개념 <a href="#basic-concepts" id="basic-concepts"></a>
 
 * [DNS](basic-concepts/dns/README.md)
-  * [보안에 필요한 DNS 개념편 #1](basic-concepts/dns-concepts.md)
+  * [보안에 필요한 DNS 개념 편 #1](basic-concepts/dns-concepts.md)
 
 ## 🎅 MISC
 
