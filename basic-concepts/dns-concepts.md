@@ -4,13 +4,13 @@ description: 'DNS 개념 편 #1'
 
 # 사이버 보안에 필요한 DNS 개념 편 #1
 
-기본 개념DNS 편은 크게 세편으로 구성된다.
+기본 개념 DNS 편은 크게 세편으로 구성된다.
 
 1. 개념 편
 2. 공격 & 우회 편 (레드팀) - TBU
 3. 방어 & 탐지 편 (블루팀) - TBU
 
-이번개념편에서는 DNS에 대한 전반적인 개념과 작동 원리, 중요성에 대해 다룬다.
+이번 개념편에서는 DNS에 대한 전반적인 개념과 작동 원리, 중요성에 대해 다룬다.
 
 ## 개요
 
@@ -50,7 +50,7 @@ DNS가 어떻게 작동하는지 알아보자.&#x20;
 
 사실상 아래 다이어그램은 ISP를 통해 Local DNS Server와 먼저 교신을 하고도 IP를 찾지 못했을 때의 예이다. 예를 들어 KT를 사용한다면 KT에서 제공하는 기본 DNS 서버를 통해 도메인의 IP를 찾을 수 있다면  아래 구조까지 내려가지 않아도 된다.
 
-#### 1. Root Name Server&#x20;
+### 1. Root Name Server&#x20;
 
 Root Name 서버가 등장하는 시점은 다음과 같다. 아래 다이어그램의 과정과 순서 번호를 적어 놓았으니 그대로 따라오면 된다.
 
@@ -76,7 +76,7 @@ Root Name Server는 레드팀.com의 IP 주소를 알진 못하지만 .com TLD �
 
 {% embed url="https://root-servers.org/" %}
 
-#### 2. Top-Level Domain Name Server
+### 2. Top-Level Domain Name Server
 
 TLD Server는 TLD에 따라 모든 도메인 정보를 제공한다. 예를 들어 도메인 레드팀.com을 등록하려면 com에 대한 TLD registry를 사용하여 등록해야 하며 ccTLD ( Counry-code TLD)라 부르는 국가 TLD느 국가 차원에서 관리를 하는 TLD로 분류된다. 대한민국의 경우 .kr가 ccTLD이며 KISA에서 관리한다.
 
@@ -91,7 +91,7 @@ com TLD Server는 레드팀.com의 IP 주소를 모르지만, 레드팀.com 도�
 * (4) DNS Resolving Name Server: .com TLD Name Server! 레드팀.com IP주소 좀 알려줘 !
 * (5) TLD Name Server: 잠시만.. 찾아볼께! ... 레드팀.com 도메인은 있는데 IP 주소 정보는 없어. 대신 레드팀.com이 사용하는 Authoritative Name Server는 알고 있어. 이 Authoritative Name Server가 레드팀.com IP를 알려 줄꺼야!
 
-#### &#x20;3. Authoritative Name Server&#x20;
+### &#x20;3. Authoritative Name Server&#x20;
 
 이제 DNS Resolving Name Server는 TLD Name Server를 통해 레드팀.com의 IP 주소를 알고 있는 특정 Authoritative Name Server의 이름을 알아냈다. 위에서 설명했듯이 Authroitative Name Server는 도메인 이름을 IP 주소로 변환하는 권한을 가지고 있는 마지막 단계의 Name Server 이므로 레드팀.com의 IP 주소를 DNS Resolving Name Server에게 알려준다.
 
@@ -114,7 +114,7 @@ com TLD Server는 레드팀.com의 IP 주소를 모르지만, 레드팀.com 도�
 
 DNS는 사이버 보안 관점에서 굉장히 중요한 역할을 한다.
 
-#### 레드팀/공격자의 관점에서의 DNS:
+### 레드팀/공격자의 관점에서의 DNS:
 
 1. DNS Cache Poisoning: 공격자는 DNS 캐시를 조작하여 악의적인 IP 주소를 도메인 이름에 반환하여 사용자가 악성 사이트로 리디렉션되거나 악성 행위를 수행할 수 있다.
 2. DNS Spoofing: 공격자는 DNS 응답 (Response)을 위조하여 사용자를 속여 정상적인 사이트로 접속하는 것처럼 보이지만, 사실은 악성 사이트에 접속하게 유도할수 있다.
@@ -123,7 +123,7 @@ DNS는 사이버 보안 관점에서 굉장히 중요한 역할을 한다.
 
 그렇다면 방어자의 관점에서 DNS는 어떠한 역할을 할까? 어렵게 생각말고 위에 내용을 180도 바꿔 생각해보면 된다.
 
-#### 블루팀/방어자의 관점에서의 DNS:
+### 블루팀/방어자의 관점에서의 DNS:
 
 1. DNS 악성 활동 탐지: DNS 로그는 악성 활동 탐지와 분석에 중요한 정보를 제공한다. 공격자의 악성 도메인 또는 C\&C(Command and Control) 서버와의 연결은 DNS를 통과하기 떄문에 DNS 로그를 분석하는 것은 탐지 활동에 있어서 중요한 역할은 한다.
 2. DNS 웹 필터링 (검열) : DNS는 웹 필터링에 사용될 수 있다. 말 그래도 악성 웹 사이트나 공격 도메인등에 대한 접근을 DNS 차원에서 차단하거나 제어할 수 있기 때문에 보안과 안전을 강화할 수 있다. 또한 DNS 필터링을 거쳐 위조된 웹 사이트에 접속하는 것을 방지할 수 있다.
