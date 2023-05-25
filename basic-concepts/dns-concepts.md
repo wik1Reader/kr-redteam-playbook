@@ -15,7 +15,8 @@
 참고로 당시 필자는 DNS 우회나 공격 기법에 대해선 알고 있었지만 실제 DNS가 어떻게 작동하는지에 대해서는 설명하지 못하였다. 사실상 떨어진 이유도 기본에 충실하지 못하였기때문에 떨어졌어도 그렇게 억울할 일이 없다. ( tmi 필자는 갤럭시 유저다).
 
 어쨌든 빅테크 사이버보안 시장 인터뷰에서도 자주 물어보는 질문이니 DNS에 대한 개념은 중요하다 하겠다.
-![](../../obsidian\_resources/apple%20interview.png)
+![](<../../obsidian\_resources/apple%20interview.png>)
+
 
 
 가장 효과적인 설명방식인 Golden Circle의 무엇을 어떻게 왜? (What -> How -> Why) 순으로 알아 볼테니 제발 잘 따라와 주길 바란다. 또한 최대한 이해하기 쉽게 쉬운 언어와 다이어그램으로 설명하니 이 포스트를 다 읽을 때쯤 당신은 APPLE사의 인터뷰 질문을 아주 훌륭하게 통과할 수 있다.
@@ -24,14 +25,11 @@
 DNS는 Domain Name System의 약자로 쉽게 설명하자면 "온라인사의 전화번호부"라고도 할 수 있다. 라때 시절 전화번호 책에서 전화 번호를 찾거나 종이 지도로 길을 찾아 보았듯 사이버상에도 DNS을 통해 목적지의 주소를 찾아야 한다. 이렇게 컴퓨터 이름(도메인 이름)을 찾아 컴퓨터의 주소인 IP를 얻는 시스템을 DNS라고 부른다. 영어권 국가에 거주한다면 Yello Pages라고도 볼수 있다.
 https://en.wikipedia.org/wiki/Yellow_pages
 
-![](../../obsidian\_resources/Pasted%20image%2020230525090018.png)
+![](<../../obsidian\_resources/Pasted%20image%2020230525090018.png>)
 
 단, DNS가 전화번호북과 다른점이 있다면 DNS는 인터넷에 연결된 당신의 컴퓨터가 "알아서" 찾아주는 시스템이라 전화번호북처 "직접" 찾아보지 않아도 된다는 점이다. 
 
 지금 브라우저에서 https://레드팀.com을 찾아보자. 브라우저는 "알아서" 레드팀.com을 찾아서 보여준다. 
-
-![](../../obsidian\_resources/Pasted%20image%2020230525090950.png)
-
 
 ## DNS LOOKUP, 그거 어떻게 하는건데? (How?)
 
@@ -55,7 +53,7 @@ Root Name 서버가 등장하는 시점은 다음과 같다. 아래 다이어그
 이때 Root Name Server가 레드팀.com에 대한 정보가 없다면 다음과 같이 최상위 Root에서 시작해 순서대로 Child Name 서버 노드에게 물어보는 구조이다.
 
 - (3) Root Name Server: 나도 레드팀.com의 IP주소 정보가 없어 대신 .com TLD를 가지고 있으니 .com TLD 서버한테 물어봐! 
-![](../../obsidian\_resources/Pasted%20image%2020230525115224.png)
+![](<../../obsidian\_resources/Pasted%20image%2020230525115224.png>)
 
 Root Name Server는 레드팀.com의 IP 주소를 알진 못하지만 .com TLD 네임 서버의 이름을 알고 있어 DNS Query를  다음 노드인 TLD 서버에 전달하게 된다. 이렇게 하면 DNS Resolving Name Server가 이 com TLD  서버에 레드팀.com의 IP 주소를 요청할 수 있다.
 
@@ -80,7 +78,7 @@ com TLD Server는 레드팀.com의 IP 주소를 모르지만, 레드팀.com 도�
 - (5) TLD  Name Server: 잠시만.. 찾아볼께! ... 레드팀.com 도메인은 있는데 IP 주소 정보는 없어. 대신 레드팀.com이 사용하는 Authoritative Name Server는 알고 있어. 이 Authoritative Name Server가 레드팀.com IP를 알려 줄꺼야!
 
 
-![](../../obsidian\_resources/Pasted%20image%2020230525115224.png)
+![](<../../obsidian\_resources/Pasted%20image%2020230525115224.png>)
 3. Authoritative Name Server
 이제 DNS Resolving Name Server는 TLD Name Server를 통해 레드팀.com의 IP 주소를 알고 있는 특정 Authoritative Name Server의 이름을 알아냈다. 위에서 설명했듯이 Authroitative Name Server는 도메인 이름을 IP 주소로 변환하는 권한을 가지고 있는 마지막 단계의 Name Server 이므로 레드팀.com의 IP 주소를 DNS Resolving Name Server에게 알려준다.
 
@@ -91,7 +89,7 @@ com TLD Server는 레드팀.com의 IP 주소를 모르지만, 레드팀.com 도�
 - (7) Authroitative Name Server: Roger! 레드팀.com IP는 A.B.C.D야
 
 
-![](../../obsidian\_resources/Pasted%20image%2020230525115224.png)
+![](<../../obsidian\_resources/Pasted%20image%2020230525115224.png>)
 
 그 외  (9) (10) 과정: 이제 유저가 도메인의 IP를 알아냈으니 이 IP의 호스팅된 여러 서비스 ( Web, Mail 등 )와 구동이 가능하다.
 
