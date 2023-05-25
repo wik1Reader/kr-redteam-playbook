@@ -200,6 +200,8 @@
 
 * [DNS](basic-concepts/dns/README.md)
   * [보안에 필요한 DNS 개념 편 #1](basic-concepts/dns-concepts.md)
+  * [해킹에 필요한 DNS 공격 & 우회 기법 편 #2](basic-concepts/dns/dns-and-2.md)
+  * [방어에 필요한 DNS 탐지 편 #3](basic-concepts/dns/dns-3.md)
 
 ## 🎅 MISC
 
