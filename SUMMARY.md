@@ -192,6 +192,10 @@
 * [취약한 랩을 위한 설정 커맨드](homelab/homelab-misconfigurations.md)
 * [말웨어 자동 분석툴 Cuckoo 샌드박스 설치](homelab/cuckoo.md)
 
+
+## 기본 개념 <a href="#basic-concepts" id="basic-concepts"></a>
+[해커가 알아야하는 DNS 기본 개념 1편](basic-concepts/dns-concepts.md)
+
 ## 🎅 MISC
 
 * [Changelog](misc/changelog.md)

@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8ee5ce9c5c43ec9b",
+            "id": "f80e53bc1f740dd1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md",
+                "file": "misc/changelog.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md",
+                "file": "misc/changelog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md",
+                "file": "misc/changelog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "initial-access/phish-attachments/hta.md"
+                "file": "misc/changelog.md"
               }
             }
           }
@@ -154,15 +154,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8ee5ce9c5c43ec9b",
+  "active": "f80e53bc1f740dd1",
   "lastOpenFiles": [
-    "initial-access/phish-attachments/XLM-Excel-40.md",
-    "obsidian_resources/Pasted image 20230423103534 (1) (2).png",
-    "infrastructure/infra-automation/https-redir-automation.md",
+    "misc/contributions.md",
+    "misc/csharp-snippets.md",
+    "misc/powershell-oneliners.md",
+    "misc/레퍼런스-크레딧.md",
+    "SUMMARY.md",
+    "basic-concepts/dns-concepts.md",
+    "credential-access/authentication-coercion/ms-efsrpc.md",
+    "credential-access/authentication-coercion/ms-dfsnm.md",
+    "README.md",
+    "신냉전과 제국주의 부활과 사이버 범죄의 연결고리.md",
+    "basic-concepts",
+    "lateral-movement/pivoting.md",
+    "lateral-movement/smb-psexec.md",
+    "obsidian_resources/Pasted image 20230525115224.png",
+    "obsidian_resources/Pasted image 20230525115047.png",
+    "obsidian_resources/Pasted image 20230525110026.png",
+    "obsidian_resources/Pasted image 20230525090950.png",
+    "obsidian_resources/Pasted image 20230525090851.png",
+    "obsidian_resources/Pasted image 20230525090018.png",
+    "lateral-movement/pass-the-hash.md",
+    "lateral-movement/rdp.md",
+    "obsidian_resources/apple interview.png",
+    "obsidian_resources/Pasted image 20230523140907.png",
+    "obsidian_resources/Pasted image 20230523140858.png",
+    "obsidian_resources/Pasted image 20230519133010.png",
     "initial-access/phish-attachments/hta.md",
+    "initial-access/phish-attachments/XLM-Excel-40.md",
+    "infrastructure/infra-automation/https-redir-automation.md",
     "initial-access/phish-attachments/follina.md",
-    "obsidian_resources/Pasted image 20230504185904.png",
-    "obsidian_resources/Pasted image 20230504185852.png",
     "initial-access/phish-attachments/lnk.md",
     "initial-access/phish-attachments/vba-stomping.md",
     "initial-access/phish-attachments/vba-purging.md",
@@ -171,28 +193,8 @@
     "initial-access/phish-attachments/vba-macros.md",
     "initial-access/phish-attachments/README.md",
     "initial-access/phish-attachments/dotnettojs.md",
-    "obsidian_resources/화면 캡처 2023-05-02 200259.png",
-    "obsidian_resources/Pasted image 20230502200118.png",
-    "obsidian_resources/Pasted image 20230502195849.png",
-    "obsidian_resources/Pasted image 20230502195827.png",
-    "obsidian_resources/Pasted image 20230502195135.png",
-    "obsidian_resources/Pasted image 20230502193523.png",
-    "obsidian_resources/Pasted image 20230502193306.png",
-    "initial-access/html-smuggling.md",
-    "lateral-movement/ssh-tunnel.md",
-    "SUMMARY.md",
-    "infrastructure/infra-automation/terraform.md",
-    "infrastructure/infra-automation/README.md",
-    "infrastructure/infra-automation/mail-terraform.md",
     "infrastructure/infra-automation",
-    "infrastructure/domain-fronting.md",
-    "lateral-movement/rdp.md",
-    "infrastructure/smtp-aws-zoho.md",
-    "lateral-movement/dynamic-port-fowarding.md",
-    "README.md",
-    "what-even-is-redteam.md",
     "Untitled.canvas",
-    "2023-04-23.md",
     "obsidian_resources",
     "New folder"
   ]
