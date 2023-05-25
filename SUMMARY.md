@@ -189,16 +189,16 @@
 
 * [개념](real-attack-ttp-and-mitigations/concepts.md)
 
-## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
+## 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 🧑🔬 홈 랩 (Home lab) <a href="#homelab" id="homelab"></a>
 
 * [시스몬 (sysmon) 설치](homelab/installing-sysmon.md)
 * [SIEM과 EDR 솔루션 설치](homelab/edr.md)
 * [취약한 랩을 위한 설정 커맨드](homelab/homelab-misconfigurations.md)
 * [말웨어 자동 분석툴 Cuckoo 샌드박스 설치](homelab/cuckoo.md)
 
-
 ## 기본 개념 <a href="#basic-concepts" id="basic-concepts"></a>
-* [해커가 알아야하는 DNS 기본 개념 1편](basic-concepts/dns-concepts.md)
+
+* [DNS 개념편 #1](basic-concepts/dns-concepts.md)
 
 ## 🎅 MISC
 

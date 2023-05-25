@@ -29,7 +29,11 @@ description: >-
 
 아래와 같은 경우 사용자의 인터넷 검열을 통해 일부 웹 사이트 및 서비스에 접근이 제한된다. 따라서,사용자는 security.grootboan.com을 열람하지 못한다.&#x20;
 
+<div align="center">
+
 <figure><img src="../obsidian_resources/Pasted image 20230424114206.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 이런 경우에 SSH를 사용하여 로컬 시스템의 인터넷 트래픽을 SSH 서버로 전달하면, 사용자는 제한된 콘텐츠에 접근할 수 있다. 다음 다이어그램으로 하나씩 설명을 해보자.&#x20;
 
@@ -55,7 +59,11 @@ ssh -D 127.0.0.1:9090 admin@REMOTE_SERVER_IP
 
 마지막으로, 이제 브라우저를 새로고침하여, MY IP를 알아보면 사용자의 실제 IP가 아닌 Remote Server VPS IP로 인식하는 것을 알 수 있다.
 
-![](<../obsidian\_resources/Pasted image 20230424122254.png>)
+<div align="left">
+
+<img src="../obsidian_resources/Pasted image 20230424122254.png" alt="">
+
+</div>
 
 이로써 다이나믹 포트 포워딩을 이용하여 SOCKS Proxy 설정법에 대해서 다뤄봤다.
 
@@ -119,7 +127,11 @@ vi /etc/proxychains4.conf
 
 ![](<../obsidian\_resources/Pasted image 20230424141339.png>)
 
-![](<../obsidian\_resources/Pasted image 20230424141407.png>)
+<div align="center">
+
+<img src="../obsidian_resources/Pasted image 20230424141407.png" alt="">
+
+</div>
 
 ## 실제 공격 데모
 
