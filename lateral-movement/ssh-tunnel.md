@@ -86,7 +86,7 @@ ssh -L <LOCAL_HOST>:<LOCAL_PORT>:<REMOTE_HOST>:<REMOTE_PORT> <[USER@]SERVER_IP>
 
 Choi는 내부 192.168.137.136 포트 80에서 웹 서버가 실행되어 있는것을 확인했다. Choi는 외부에서 Groot 팀원이 내부 서버를 접근할 수 있게 리모트 VPS 게이트웨이에 리모트 포트 포워딩을 해주어 외부에서도 Choi가 있는 로컬 서비스를 외부에있는 Groot가  접근할 수 있게 해준다.
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
 데모를 위해 Digital Ocean 또는 AWS로 간단히 Gateway 호스트를 준비한다. 본 데모에서는 기본 Ubuntu 서버를 만들었다. 따로 설치할 라이브러리는 없고 퍼블릭 IP만 기억해 준다.
 

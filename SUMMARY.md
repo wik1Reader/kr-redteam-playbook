@@ -176,6 +176,7 @@
   * [첫번쩨, payload설정 방법](critical-info-infrastructure/01-account-management/payload.md)
   * [두번째, 세션을 유지하는 방법](critical-info-infrastructure/01-account-management/undefined-1.md)
   * [CSRF Token에 관하여](critical-info-infrastructure/01-account-management/csrf-token.md)
+  * [세번째, OWASP Juice Shop 로그인 페이지에서의 통신 흐름과 구조 알아보기](critical-info-infrastructure/01-account-management/owasp-juice-shop.md)
 
 ## 개념 <a href="#general-concepts" id="general-concepts"></a>
 

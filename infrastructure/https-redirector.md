@@ -68,7 +68,7 @@ server {
 
 TLS 인증서를 받으려면 도메인이 있어야 하고, DNS에서 리다이렉터 서버의 IP주소를 가르키는 A레코드도 하나 있어야 한다. Route 53나 Namecheap 등에 가서 생성한다. 이번 실습에서는 `web.grootbaon.com` 레코드를 생성했다.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 또한, 0.0.0.0에서 포트 80/443 인바운드 접근하도록 보안그룹을 잘 설정했는지 확인한다. DNS A 레코드와 방화벽 설정이 좋다면 cerbot을 실행한다.
 

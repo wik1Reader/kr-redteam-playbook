@@ -4,7 +4,7 @@ CSRF 토큰이란?
 
 CSRF 토큰은 서버측 애플리케이션에서 생성되고 클라이언트와 공유되는 인증 값이다. 클라이언트는 서버의 통신에 올바른 CSRF 토큰을 포함해야 한다. 그렇지 않으면 서버는 요청된 작업 수행을 거부한다. CSRF 토큰을 클라이언트와 공유하는 일반적인 방법은 HTML 형식의 숨겨진 매개변수로 포함하는 것이다.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -19,4 +19,4 @@ CSRF Token은 아래 이미지와 같이 페이지 소스에서 확인이 가능
 
 CSRF Token은 아래 이미지와 같이 페이지 소스에서 확인이 가능하다. 다만 이 방법은 현재 DVWA의 페이지 소스에서는 hidden 상태가 아니기 때문에 쉽게 찾을 수 있으나 보통 웹 사이트의 Token은 hidden 상태로 보안되어 있다.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>

@@ -147,7 +147,7 @@ RBCD는 액티브 디렉토리의 커버로스나 `ms-DS-AllowedToActOnBehalfOfO
 
 * `(Default Domain Controller Policy 혹은 GPO`) `> Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options > Domain controller: LDAP server signing requirement` - REQUIRED 로 설정
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 그 외에는 WebDAV 서비스를 사용하지 않는 호스트들의 WebClient 서비스를 비활성화 하는 방법이 있다. 완벽히 RBCD를 막을 순 없지만, 공격자의 입장에서 공격이 좀 더 까다로워진다. 다음의 파워쉘 명령어를 사용하거나 명령어를 GPO화 시켜 도메인 호스트들에게 적용한다.
 
