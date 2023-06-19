@@ -169,13 +169,13 @@
 * [Dynamic Port Forwarding & ProxyChains](lateral-movement/dynamic-port-fowarding.md)
 * [Network Pivoting (피벗) - TODO](lateral-movement/pivoting.md)
 
-## 🏭 주요정보통신기반시설 취약점 분석 <a href="#critical-info-infrastructure" id="critical-info-infrastructure"></a>
+## 🏭 최신 취약점을 응용한 웹&모바일 해킹 과정 따라하기\&CTF 문제풀이 <a href="#critical-info-infrastructure" id="critical-info-infrastructure"></a>
 
 * [01-계정관리](critical-info-infrastructure/01-account-management/README.md)
   * [통신 과정 흐름 훑어보기](critical-info-infrastructure/01-account-management/undefined.md)
   * [첫번쩨, payload설정 방법](critical-info-infrastructure/01-account-management/payload.md)
   * [두번째, 세션을 유지하는 방법](critical-info-infrastructure/01-account-management/undefined-1.md)
-  * [자동화 총정리](critical-info-infrastructure/01-account-management/undefined-3.md)
+  * [CSRF Token에 관하여](critical-info-infrastructure/01-account-management/csrf-token.md)
 
 ## 개념 <a href="#general-concepts" id="general-concepts"></a>
 
