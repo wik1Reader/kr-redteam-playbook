@@ -46,20 +46,24 @@
 
 4/16 - [undefined-1.md](../critical-info-infrastructure/01-account-management/undefined-1.md "mention") 페이지 추가 [차가운낑깡](http://localhost:5000/u/1y9ExMjOF5OnXgSOyWROhJQascW2 "mention")
 
-4/18 -   [SMTP GoPhish (AWS + ZOHO)](../infrastructure/smtp-aws-zoho.md)   페이지 추가 - [@nanentp](ttps://github.com/nanentp)
+4/18 - [SMTP GoPhish (AWS + ZOHO)](../infrastructure/smtp-aws-zoho.md) 페이지 추가 - [@nanentp](ttps://github.com/nanentp)
 
-4/19 - [https-redirector.md](../infrastructure/https-redirector.md "mention")페이지 추가&#x20;
+4/19 - [https-redirector.md](../infrastructure/https-redirector.md "mention")페이지 추가
 
-4/22 - [취약한 랩을 위한 설정 커맨드](https://www.xn--hy1b43d247a.com/homelab/homelab-misconfigurations) - SCCM 삽질과 간단 레퍼런스 추가&#x20;
+4/22 - [취약한 랩을 위한 설정 커맨드](https://www.xn--hy1b43d247a.com/homelab/homelab-misconfigurations) - SCCM 삽질과 간단 레퍼런스 추가
 
 4/23 - [SSH Port Forwarding & Tunneling](../lateral-movement/ssh-tunnel.md) - 로컬및 리모트 포트 포워딩 방법 소개 -[@nanentp](ttps://github.com/nanentp)
 
 4/24 - [Dynamic Port Forwarding & ProxyChains](../lateral-movement/dynamic-port-fowarding.md) - 다이나믹 포트 포워딩/Proxychains 소개 - [@nanentp](ttps://github.com/nanentp)
 
-4/25 - [domain-fronting.md](../infrastructure/domain-fronting.md "mention")페이지 추가&#x20;
+4/25 - [domain-fronting.md](../infrastructure/domain-fronting.md "mention")페이지 추가
 
 4/27 - [terraform.md](../infrastructure/infra-automation/terraform.md "mention")페이지 추가
 
 4/30 - [hta.md](../initial-access/phish-attachments/hta.md "mention") 페이지 추가 - [@nanentp](ttps://github.com/nanentp)
 
-5/1 - [https-redir-automation.md](../infrastructure/infra-automation/https-redir-automation.md "mention")페이지추가&#x20;
+5/1 - [https-redir-automation.md](../infrastructure/infra-automation/https-redir-automation.md "mention")페이지추가
+
+6/19 - [csrf-token.md](../critical-info-infrastructure/01-account-management/csrf-token.md "mention") 페이지 추가 [차가운낑깡](http://localhost:5000/u/1y9ExMjOF5OnXgSOyWROhJQascW2 "mention")
+
+6/19 - [owasp-juice-shop.md](../critical-info-infrastructure/01-account-management/owasp-juice-shop.md "mention") 페이지 추가 [차가운낑깡](http://localhost:5000/u/1y9ExMjOF5OnXgSOyWROhJQascW2 "mention")

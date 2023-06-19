@@ -6,29 +6,29 @@
 
 Juice Shop의 로그인 페이지 주소이고&#x20;
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 
 
 Burp Suite로 해당 페이지를 접근하면 아래와 같이 여러 URL에 접근 되는 것이 보인다.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 
 지금 목표는 로그인 성공이니 여기에서 다 볼 필요는 없다. 그럼 로그인을 시도할 때 통신 되는 데이터를 찾아보자 로그인을 시도할 시에 /rest/user/login 주소로 통신이 되고 아래 이미지 처럼 email, password 값에 임의로 주소를 넣어야 로그인이 성공 되는 것을 짐작하는데
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 Email의 메시지 박스와&#x20;
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -38,11 +38,11 @@ password의 메시지 박스의 소스코드를 확인 해야 한다.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -56,13 +56,13 @@ password의 메시지 박스의 소스코드를 확인 해야 한다.
 
 /api/Quantitys/ 의 과정으로 통신이 진행되면서 로그인이 성공하는 것을 확인 할 수 있는데 여기에서 '/api/Quantitys/' api를 짐작하는 통신을 확인 할 수 있고
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 
 
 /rest/user/whoami는 로그인 사용자의 정보로 짐작이 되는데
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -70,13 +70,13 @@ password의 메시지 박스의 소스코드를 확인 해야 한다.
 
 아래 이미지와 같이 로그인을 성공하면 "authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N ....이하생략  token이 암호화 되어 있는 것과
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 
 
 '/api/Quantitys/' api의 통신 데이터로 보이는 값을 확인 할 수 있는데
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -92,7 +92,7 @@ password의 메시지 박스의 소스코드를 확인 해야 한다.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -100,7 +100,7 @@ password의 메시지 박스의 소스코드를 확인 해야 한다.
 
 두번째, 로그인을 성공할 시의 정보 값을 요점으로 봐야하는데
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 JWT을 간략히 소개하자면
 

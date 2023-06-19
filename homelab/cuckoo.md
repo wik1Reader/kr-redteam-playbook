@@ -76,7 +76,7 @@ _주의! 데이터베이스 쿼리를 저장을 위한 개별 VM을 설치하여
 
 왼쪽 빨간 네모안이 Cuckcoo 호스트입니다. 호스트 VM은 서버의 역할을 수행하며 하나의 호스트를를 설정합니다.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Cuckoo 호스트 요구 사항 설정
 
@@ -187,13 +187,13 @@ sudo pip2 install -U cuckoo
 
 이제 Cuckoo서버가 호스트에 제대로 설치되었는지 확인해 보겠습니다.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (3).png" alt=""><figcaption></figcaption></figure>
 
 이것으로 Cuckoo 샌드박스의 호스트 설치를 마칩니다. 이제 Cuckoo Guest 설정 방법과 Cuckoo 샌드박스 분석 결과를 검증하기 위한 악성코드 샘플 테스트 방법을 다룹니다.
 
 ### Cuckoo 게스트 설치
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (4).png" alt=""><figcaption></figcaption></figure>
 
 #### VirtualBox에 Cuckoo Windows 게스트 VM 설치
 
@@ -225,7 +225,7 @@ Settings -> Storage -> CD 아이콘을 클릭하여 윈도우 .iso를 가져옵�
 
 Help -> About에서 VirtualBox 버전을 확인합시다. 본 데모는 6.1.32\_Ubuntu r1 49290을 실행 중입니다.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
 
 VirtualBox 다운로드창에 가서 버전에 맞는확장 프로그램을 다운로드하고 가져옵니다.
 
