@@ -62,8 +62,10 @@
 
 4/30 - [hta.md](../initial-access/phish-attachments/hta.md "mention") 페이지 추가 - [@nanentp](ttps://github.com/nanentp)
 
-5/1 - [https-redir-automation.md](../infrastructure/infra-automation/https-redir-automation.md "mention")페이지추가
+5/1 - [https-redir-automation.md](../infrastructure/infra-automation/https-redir-automation.md "mention")페이지 추가
 
 6/19 - [csrf-token.md](../critical-info-infrastructure/01-account-management/csrf-token.md "mention") 페이지 추가 [차가운낑깡](http://localhost:5000/u/1y9ExMjOF5OnXgSOyWROhJQascW2 "mention")
 
 6/19 - [owasp-juice-shop.md](../critical-info-infrastructure/01-account-management/owasp-juice-shop.md "mention") 페이지 추가 [차가운낑깡](http://localhost:5000/u/1y9ExMjOF5OnXgSOyWROhJQascW2 "mention")
+
+7/3 - [Broken link](broken-reference "mention") 페이지 추가&#x20;
