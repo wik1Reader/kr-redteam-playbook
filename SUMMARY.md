@@ -131,6 +131,7 @@
 
 ## 👿 후속 공격 (Post Exploitation)
 
+* [후속 공격의 진화](post-exploitation/evolution-of-postex.md)
 * [External SID Golden Ticket](post-exploitation/external-sid-golden-ticket.md)
 
 ## 🎭 계정 정보 탈취 (Credential Access)

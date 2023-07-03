@@ -24,7 +24,7 @@ Email의 메시지 박스와&#x20;
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -56,7 +56,7 @@ password의 메시지 박스의 소스코드를 확인 해야 한다.
 
 /api/Quantitys/ 의 과정으로 통신이 진행되면서 로그인이 성공하는 것을 확인 할 수 있는데 여기에서 '/api/Quantitys/' api를 짐작하는 통신을 확인 할 수 있고
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
