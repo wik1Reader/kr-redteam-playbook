@@ -70,4 +70,4 @@
 
 7/3 - [후속 공격의 진화](https://www.xn--hy1b43d247a.com/post-exploitation/evolution-of-postex) 페이지 추가&#x20;
 
-7/9 - TODO&#x20;
+7/9 - [타겟 발견](../initial-recon/target-discovery.md)페이지 추가&#x20;
