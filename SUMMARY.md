@@ -28,7 +28,7 @@
 ## 🔎 초기 정찰 <a href="#initial-recon" id="initial-recon"></a>
 
 * [개념](initial-recon/concept.md)
-* [타겟 탐색](initial-recon/target-discovery.md)
+* [타겟 발견](initial-recon/target-discovery.md)
 * [OSINT](initial-recon/osint/README.md)
   * [작전보안](initial-recon/osint/opsec.md)
   * [자산 정보 수집](initial-recon/osint/asset-discovery.md)

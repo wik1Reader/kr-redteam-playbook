@@ -69,3 +69,5 @@
 6/19 - [owasp-juice-shop.md](../critical-info-infrastructure/01-account-management/owasp-juice-shop.md "mention") 페이지 추가 [차가운낑깡](http://localhost:5000/u/1y9ExMjOF5OnXgSOyWROhJQascW2 "mention")
 
 7/3 - [후속 공격의 진화](https://www.xn--hy1b43d247a.com/post-exploitation/evolution-of-postex) 페이지 추가&#x20;
+
+7/9 - TODO&#x20;
