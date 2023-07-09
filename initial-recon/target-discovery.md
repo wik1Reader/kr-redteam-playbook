@@ -1,4 +1,4 @@
-# 타겟 탐색
+# 타겟 발견
 
 초기 정찰 단계에서는 OSINT와 외부망 정찰을 통해 타겟 기관의 외부망 자산, 클라우드 자산, (서브)도메인, 모바일 앱, 회사 조직도, 인원 현황, 이메일 주소 등을 수집한다. 초기 정찰을 진행하며 앞으로 공격할 타겟들을 정리하는 기술적인 작업을 공격 표면 탐색/발견 (Attack Surface Discovery) 혹은 타겟 발견(Target Discovery)이라고도 한다.
 
@@ -67,7 +67,7 @@ theHarvester -d domain.com -b all -f domain.com.json
 subfinder -d domain.com -rl 30 -t 10 -silent -active -o subfinder-domain.com 
 
 # 예시) 루트 도메인을 돌며 커맨드 실행 
-cat i in `cat domains.txt`; do amass enum -d $i -passive -o amass-$i; done 
+for i in `cat domains.txt`; do amass enum -d $i -passive -o amass-$i; done 
 for i in `cat domains.txt`; do theHarvester -d $i -b all -f theHarvester-$i.json ; done
 for i in `cat domains.txt`; do subfinder -d $i -rl 30 -t 10 -silent -o subfinder-$i | tee subfinder-$i ; done
 
