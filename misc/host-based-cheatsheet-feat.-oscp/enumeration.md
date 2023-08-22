@@ -1,5 +1,5 @@
 ---
-description: All you need to know for basic host-based enumeration for OSCP
+description: All you need to know about basic host-based enumeration for OSCP
 ---
 
 # Enumeration (정보 수집 및 열거)
