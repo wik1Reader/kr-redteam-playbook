@@ -211,8 +211,8 @@
 
 * [OSCP 대비 CheatSheet 모음](misc/oscp-cheatsheet/README.md)
   * [Enumeration CheatSheet](misc/oscp-cheatsheet/enumeration-cheatsheet.md)
-  * [Exploitation and Post-Exploitation CheatSheet](misc/oscp-cheatsheet/exploitation-and-post-exploitation-cheatsheet.md)
-  * [Windows Privilege Escalation](misc/oscp-cheatsheet/windows-privilege-escalation.md)
+  * [Exploitation](misc/oscp-cheatsheet/exploitation.md)
+  * [Untitled](misc/oscp-cheatsheet/untitled.md)
   * [Linux Privilege Escalation](misc/oscp-cheatsheet/linux-privilege-escalation.md)
 * [Changelog](misc/changelog.md)
 * [기여하는 방법](misc/contributions.md)

