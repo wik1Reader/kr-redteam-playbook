@@ -1,5 +1,5 @@
 ---
-description: OSCP시험에 필요한 기본 호스트 공격 명령어 CheatSheet by nanentp
+description: OSCP시험에 필요한 기본 호스트 공격 명령어 CheatSheet by Groot Security
 ---
 
 # Host-based 공격 CheatSheet (FEAT. OSCP)
