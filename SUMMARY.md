@@ -209,10 +209,10 @@
 
 ## 🎅 MISC
 
-* [Host-based 공격 CheatSheet (OSCP용)](misc/host-based-cheatsheet-oscp/README.md)
-  * [Enumeration (정보 수집 및 열거)](misc/host-based-cheatsheet-oscp/enumeration.md)
-  * [Exploitation (공격)](misc/host-based-cheatsheet-oscp/exploitation.md)
-  * [Post Exploitation (후속공격)](misc/host-based-cheatsheet-oscp/post-exploitation.md)
+* [Host-based 공격 CheatSheet (FEAT. OSCP)](misc/host-based-cheatsheet-feat.-oscp/README.md)
+  * [Enumeration (정보 수집 및 열거)](misc/host-based-cheatsheet-feat.-oscp/enumeration.md)
+  * [Exploitation (공격)](misc/host-based-cheatsheet-feat.-oscp/exploitation.md)
+  * [Post Exploitation (후속공격)](misc/host-based-cheatsheet-feat.-oscp/post-exploitation.md)
 * [Changelog](misc/changelog.md)
 * [기여하는 방법](misc/contributions.md)
 * [레퍼런스와 크레딧](misc/레퍼런스-크레딧.md)
