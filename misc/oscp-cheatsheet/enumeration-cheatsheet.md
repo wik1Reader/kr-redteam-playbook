@@ -361,13 +361,42 @@ nmap -p88 --script=krb5-enum-users --script-args krb5-enum-users.realm='HTB',use
 nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=sa,mssql.password=poiuytrewq,mssql.database=bankdb,ms-sql-xp-cmdshell.cmd="whoami" 10.11.1.31
 ```
 
-\
-\
 
 
-### Telnet
+### Telnet - 25
 
 ```
 telnet $targetip 25
 ```
 
+## Finding files&#x20;
+
+```
+dir *.exe /b/s | findstr backdoor
+```
+
+## Finding known exploits from Exploit-DB
+
+To update to latest Exploit-DB
+
+```
+searchsploit -u 
+```
+
+To find a exploit
+
+```
+searchsploit $item
+```
+
+To copy the file to your current directory.
+
+```
+searchsploit -m $item 
+```
+
+To find item wihtout DOS attack
+
+```
+searchsploit apache 2.x | grep -v '/dos/'
+```
