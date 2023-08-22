@@ -1,4 +1,8 @@
-# Post Exploitation 후속공격
+---
+description: All you need to know for basic host-based post exploitation for OSCP
+---
+
+# Post Exploitation (후속공격)
 
 ## Windows Privilege Escalation
 

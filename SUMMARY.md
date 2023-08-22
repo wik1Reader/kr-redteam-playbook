@@ -210,9 +210,9 @@
 ## 🎅 MISC
 
 * [OSCP 대비 CheatSheet 모음](misc/oscp-cheatsheet/README.md)
-  * [Enumeration CheatSheet](misc/oscp-cheatsheet/enumeration-cheatsheet.md)
-  * [Exploitation](misc/oscp-cheatsheet/exploitation-and-post-exploitation-cheatsheet.md)
-  * [Post Exploitation 후속공격](misc/oscp-cheatsheet/post-exploitation.md)
+  * [Enumeration (정보 수집 및 열거)](misc/oscp-cheatsheet/enumeration.md)
+  * [Exploitation (공격)](misc/oscp-cheatsheet/exploitation-and-post-exploitation-cheatsheet.md)
+  * [Post Exploitation (후속공격)](misc/oscp-cheatsheet/windows-privilege-escalation.md)
 * [Changelog](misc/changelog.md)
 * [기여하는 방법](misc/contributions.md)
 * [레퍼런스와 크레딧](misc/레퍼런스-크레딧.md)

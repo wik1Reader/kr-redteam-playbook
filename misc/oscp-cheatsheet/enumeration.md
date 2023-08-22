@@ -1,4 +1,8 @@
-# Enumeration CheatSheet
+---
+description: All you need to know for basic host-based enumeration for OSCP
+---
+
+# Enumeration (정보 수집 및 열거)
 
 ## **Network Discovery**
 
