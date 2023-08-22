@@ -209,6 +209,11 @@
 
 ## 🎅 MISC
 
+* [호스트 공격 CheatSheet](misc/cheatsheet/README.md)
+  * [Enumeration CheatSheet](misc/cheatsheet/enumeration-cheatsheet.md)
+  * [Exploitation and Post-Exploitation CheatSheet](misc/cheatsheet/exploitation-and-post-exploitation-cheatsheet.md)
+  * [Windows Privilege Escalation](misc/cheatsheet/windows-privilege-escalation.md)
+  * [Linux Privilege Escalation](misc/cheatsheet/linux-privilege-escalation.md)
 * [Changelog](misc/changelog.md)
 * [기여하는 방법](misc/contributions.md)
 * [레퍼런스와 크레딧](misc/레퍼런스-크레딧.md)
